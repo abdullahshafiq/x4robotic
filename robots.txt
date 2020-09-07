@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /dealers.html
+Disallow: /dealers
+Disallow: /privacy.html
+Disallow: /terms.html
+Disallow: /404.html

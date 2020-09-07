@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><header class="header-container clearfix">
+            
+                <div class="wrapper clearfix relative">
+                    
+                    <a href="/"><div id="logo"></div></a>
+                    
+                    <nav>
+                    <ul>
+                        <li id="productsNav"><a href="/robotic-pool-cleaner">Products</a></li>
+                        <li id="compareNav"><a href="/compare">Compare</a></li>
+						<li><a href="/robotic-pool-cleaner#specifications">Specs</a></li>
+                        <li id="warrantyNav"><a href="/warranty">Warranty</a></li>
+                        <li><a href="/find-a-dealer" class="button btn-gold medium">Buy Now</a></li>
+                    </ul>
+                    </nav>
+                              
+                </div>
+                
+            </header>
