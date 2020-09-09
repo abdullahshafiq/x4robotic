@@ -17,14 +17,18 @@
 
     <!-- Preload Prefetch and Preconnect -->
 
-    <link href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0" as="font"
-        crossorigin />
+	<link rel="preload" href=" https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0" as="font" crossorigin>
+
+    <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com">
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="preconnect" href="https://ajax.googleapis.com">
+    <link rel="preconnect" href=" https://www.google-analytics.com">
 
 
     <script type="text/javascript">
         (function (e, t) { if (typeof define === "function" && define.amd) { define(function () { return t(e) }) } else if (typeof exports === "object") { module.exports = t } else { e.echo = t(e) } })(this, function (e) { "use strict"; var t = {}; var n = function () { }; var r, i, s, o, u; var a = function (e, t) { var n = e.getBoundingClientRect(); return n.right >= t.l && n.bottom >= t.t && n.left <= t.r && n.top <= t.b }; var f = function () { if (!o && !!i) { return } clearTimeout(i); i = setTimeout(function () { t.render(); i = null }, s) }; t.init = function (i) { i = i || {}; var a = i.offset || 0; var l = i.offsetVertical || a; var c = i.offsetHorizontal || a; var h = function (e, t) { return parseInt(e || t, 10) }; r = { t: h(i.offsetTop, l), b: h(i.offsetBottom, l), l: h(i.offsetLeft, c), r: h(i.offsetRight, c) }; s = h(i.throttle, 250); o = i.debounce !== false; u = !!i.unload; n = i.callback || n; t.render(); if (document.addEventListener) { e.addEventListener("scroll", f, false); e.addEventListener("load", f, false) } else { e.attachEvent("onscroll", f); e.attachEvent("onload", f) } }; t.render = function () { var i = document.querySelectorAll("img[data-echo]"); var s = i.length; var o, f; var l = { l: 0 - r.l, t: 0 - r.t, b: (e.innerHeight || document.documentElement.clientHeight) + r.b, r: (e.innerWidth || document.documentElement.clientWidth) + r.r }; for (var c = 0; c < s; c++) { f = i[c]; if (a(f, l)) { if (u) { f.setAttribute("data-echo-placeholder", f.src) } $(f).css("opacity", "0"); f.src = f.getAttribute("data-echo"); $(f).animate({ opacity: "1" }, { speed: 1e3 }); if (!u) { f.removeAttribute("data-echo") } n(f, "load") } else if (u && !!(o = f.getAttribute("data-echo-placeholder"))) { f.src = o; f.removeAttribute("data-echo-placeholder"); n(f, "unload") } } if (!s) { t.detach() } }; t.detach = function () { if (document.removeEventListener) { e.removeEventListener("scroll", f) } else { e.detachEvent("onscroll", f) } clearTimeout(i) }; return t })
     </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
     <script>
             (function (i, s, o, g, r, a, m) {
@@ -58,7 +62,7 @@
                 </ul>
             </nav>
             <div id="main-menu-right" class="menu align-right">
-                <a href="/find-a-dealer" class="show-for-medium button btn-gold medium">Buy Now</a>
+                <a href="/find-a-dealer" class="show-for-medium button btn-gold medium">Shop Now</a>
             </div>
         </header>
     </div>
@@ -98,7 +102,7 @@
         <div id="home-fold" class="clearfix relative">
             <div class="grid-x">
                 <div class="cell large-6 medium-6 small-12 bg-white clearfix">
-                    <div class="block-wrapper title-h3">
+                    <section class="block-wrapper title-h3">
                         <img data-echo="img/better-mix.gif" width="200" height="200" alt="icon" class="home-block-icon">
                         <h3><span>Better</span> Mix</h3>
                         <p>The X4&trade; is our best robotic pool cleaner to date. Industry-leading pumps efficiently
@@ -110,10 +114,10 @@
                             harmful chemicals to stay clean.
                         </p>
                         <!--<a href="#" class="button medium otln-blue">Learn More</a>-->
-                    </div>
+                    </section>
                 </div>
                 <div id="plus"><i class="fa fa-plus"></i></div>
-                <div class="large-6 medium-6 small-12 bg-blue clearfix">
+                <section class="large-6 medium-6 small-12 bg-blue clearfix">
                     <div class="block-wrapper title-h3">
                         <img data-echo="img/better-filtration.gif" width="200" height="200" alt="icon"
                             class="home-block-icon">
@@ -129,7 +133,7 @@
                         </p>
                         <!--<a href="#" class="button medium otln-white">How it Works</a>-->
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </div>
@@ -158,13 +162,13 @@
     </div>
     <!-- ENHANCED FILTRATION -->
     <div class="grid-container">
-        <section class="bg-white relative">
+        <section class="bg-white-enhanced bg-white relative">
             <!--<div id="down-arrow">
             	<p class="isoscelesDown isoscelesDown-light-blue">This is an isosceles triangle pointing downwards.</p>
             </div>-->
             <div class="grid-x grid-margin-x clearfix wrapper">
 
-                <div class="cell large-5 medium-6 small-12 float-left title-h2 relative z-front">
+                <div class="cell large-5 medium-6 small-12 float-left title-h2">
                     <h3>Taking it All in</h3>
                     <h2><span>Enhanced</span> Filtration</h2>
                     <p>Best-in-class filters handle more dirt and debris than any other cleaning method. Two oversized
@@ -175,11 +179,11 @@
                         best-in-class filter capacity with best-in-class filtration, so your pool doesn’t just look
                         cleaner; it’s the cleanest it can be. </p>
                 </div>
-                <div class="cell large-7 medium-6 small-12 align-self-middle relative">
+                <div class="cell large-7 medium-6 small-12">
                     <img src="img/190-cubic-inches.png" width="247" height="246" alt="190 cubic inch debris capacity"
                         id="debris-capacity-badge">
                     <img data-echo="img/pool-cleaner-filter.jpg" width="723" height="614" alt="pool cleaner filter"
-                        id="filtration-img" class="">
+                        id="filtration-img" class="absolute z-back">
                 </div>
             </div>
         </section>
@@ -187,11 +191,11 @@
     <div class="grid-container">
         <section id="micro-brushes" class="bg-white relative">
             <div class="grid-x grid-margin-x clearfix wrapper">
-                <div class="cell large-7 medium-6 small-12 align-self-middle relative">
+                <div class="cell large-7 medium-6 small-12">
                     <img data-echo="img/micro-brush-cleaning.jpg" width="996" height="815" alt="micro-brushes"
-                        class="absolute" id="micro-brushes-img">
+                         id="micro-brushes-img">
                 </div>
-                <div class="cell large-5 medium-6 small-12 float-right title-h2 relative z-front">
+                <div class="cell large-5 medium-6 small-12 float-right title-h2">
                     <h3>Like a Fine-Tooth Comb</h3>
                     <h2><span>Performance</span> Cleaning</h2>
                     <p>Typically, only 1% of pool contaminants are suspended in the water. Our goal is to enable you to
@@ -398,9 +402,9 @@
         </footer><!-- #EndLibraryItem -->
     </div><!-- max wrapper-->
 
-    <script src="https://use.typekit.net/fzb6psq.js"></script>
+    <script src="//use.typekit.net/fzb6psq.js"></script>
     <script>try { Typekit.load(); } catch (e) { }</script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="js/plugins.js"></script>
     <script type="text/javascript">
         // MyBox Script
