@@ -17,20 +17,22 @@
 
     <!-- Preload Prefetch and Preconnect -->
 
-	<link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0" as="font" crossorigin>
+    <link rel="preload"
+        href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0" as="font"
+        crossorigin>
 
-    <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com">
-    <link rel="preconnect" href="https://use.typekit.net">
-    <link rel="preconnect" href="https://ajax.googleapis.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="//maxcdn.bootstrapcdn.com">
+    <link rel="preconnect" href="//use.typekit.net">
+    <link rel="preconnect" href="//ajax.googleapis.com">
+    <link rel="preconnect" href="//www.google-analytics.com">
 
     <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript">
+    <script>
         (function (e, t) { if (typeof define === "function" && define.amd) { define(function () { return t(e) }) } else if (typeof exports === "object") { module.exports = t } else { e.echo = t(e) } })(this, function (e) { "use strict"; var t = {}; var n = function () { }; var r, i, s, o, u; var a = function (e, t) { var n = e.getBoundingClientRect(); return n.right >= t.l && n.bottom >= t.t && n.left <= t.r && n.top <= t.b }; var f = function () { if (!o && !!i) { return } clearTimeout(i); i = setTimeout(function () { t.render(); i = null }, s) }; t.init = function (i) { i = i || {}; var a = i.offset || 0; var l = i.offsetVertical || a; var c = i.offsetHorizontal || a; var h = function (e, t) { return parseInt(e || t, 10) }; r = { t: h(i.offsetTop, l), b: h(i.offsetBottom, l), l: h(i.offsetLeft, c), r: h(i.offsetRight, c) }; s = h(i.throttle, 250); o = i.debounce !== false; u = !!i.unload; n = i.callback || n; t.render(); if (document.addEventListener) { e.addEventListener("scroll", f, false); e.addEventListener("load", f, false) } else { e.attachEvent("onscroll", f); e.attachEvent("onload", f) } }; t.render = function () { var i = document.querySelectorAll("img[data-echo]"); var s = i.length; var o, f; var l = { l: 0 - r.l, t: 0 - r.t, b: (e.innerHeight || document.documentElement.clientHeight) + r.b, r: (e.innerWidth || document.documentElement.clientWidth) + r.r }; for (var c = 0; c < s; c++) { f = i[c]; if (a(f, l)) { if (u) { f.setAttribute("data-echo-placeholder", f.src) } $(f).css("opacity", "0"); f.src = f.getAttribute("data-echo"); $(f).animate({ opacity: "1" }, { speed: 1e3 }); if (!u) { f.removeAttribute("data-echo") } n(f, "load") } else if (u && !!(o = f.getAttribute("data-echo-placeholder"))) { f.src = o; f.removeAttribute("data-echo-placeholder"); n(f, "unload") } } if (!s) { t.detach() } }; t.detach = function () { if (document.removeEventListener) { e.removeEventListener("scroll", f) } else { e.detachEvent("onscroll", f) } clearTimeout(i) }; return t })
     </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
     <script>
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -100,40 +102,57 @@
     <!-- HOME FOLD -->
     <div class="grid-container">
         <div id="home-fold" class="clearfix relative">
-            <div class="grid-x">
-                <div class="cell large-6 medium-6 small-12 bg-white clearfix">
-                    <section class="block-wrapper title-h3">
-                        <img data-echo="img/better-mix.gif" width="200" height="200" alt="icon" class="home-block-icon">
-                        <h3><span>Better</span> Mix</h3>
-                        <p>The X4&trade; is our best robotic pool cleaner to date. Industry-leading pumps efficiently
-                            cycle
-                            up to 85 gallons per-minute for the best water mixing capability available. The Aquabots'
-                            powerful jets free up more dirt and debris, giving you a clearer, cleaner pool. Other pool
-                            cleaners can’t match the superior water mixing and leave areas of stagnation that require
-                            more
-                            harmful chemicals to stay clean.
-                        </p>
-                        <!--<a href="#" class="button medium otln-blue">Learn More</a>-->
-                    </section>
+            <div class="grid-x grid-padding-x align-center-middle">
+                <div class="cell large-6 medium-6 small-12 bg-white clearfix align-self-stretch">
+                    <div class="grid-x align-center-middle">
+                        <div class="cell large-8 medium-10 small-10">
+                            <section class="block-wrapper title-h3">
+                                <img src="img/better-mix.gif" width="200" height="200" alt="icon"
+                                    class="home-block-icon">
+                                <h3><span>Better</span> Mix</h3>
+                                <p>The X4&trade; is our best robotic pool cleaner to date. Industry-leading pumps
+                                    efficiently
+                                    cycle
+                                    up to 85 gallons per-minute for the best water mixing capability available. The
+                                    Aquabots'
+                                    powerful jets free up more dirt and debris, giving you a clearer, cleaner pool.
+                                    Other pool
+                                    cleaners can’t match the superior water mixing and leave areas of stagnation that
+                                    require
+                                    more
+                                    harmful chemicals to stay clean.
+                                </p>
+                                <!--<a href="#" class="button medium otln-blue">Learn More</a>-->
+                            </section>
+                        </div>
+                    </div>
                 </div>
                 <div id="plus"><i class="fa fa-plus"></i></div>
-                <section class="large-6 medium-6 small-12 bg-blue clearfix">
-                    <div class="block-wrapper title-h3">
-                        <img data-echo="img/better-filtration.gif" width="200" height="200" alt="icon"
-                            class="home-block-icon">
-                        <h3>Better Filtration</h3>
-                        <p>The Aquabot X4&trade; has refined the best robotic pool cleaner filtration system in the
-                            industry
-                            to capture more dirt and debris and make your pool clearer than ever thought possible. The
-                            X4's
-                            ultra-fine mesh filter baskets are easy to access and capture everything from large debris
-                            to
-                            small particulate down to 2 microns - that’s better filtration than most drinking water
-                            filters!
-                        </p>
-                        <!--<a href="#" class="button medium otln-white">How it Works</a>-->
+                <div class="cell large-6 medium-6 small-12 bg-blue clearfix align-self-stretch">
+                    <div class="grid-x align-center-middle">
+                        <div class="cell large-8 medium-10 small-10">
+                            <section class="block-wrapper title-h3">
+                                <img src="img/better-filtration.gif" width="200" height="200" alt="icon"
+                                    class="home-block-icon">
+                                <h3>Better Filtration</h3>
+                                <p>The Aquabot X4&trade; has refined the best robotic pool cleaner filtration system in
+                                    the
+                                    industry
+                                    to capture more dirt and debris and make your pool clearer than ever thought
+                                    possible. The
+                                    X4's
+                                    ultra-fine mesh filter baskets are easy to access and capture everything from large
+                                    debris
+                                    to
+                                    small particulate down to 2 microns - that’s better filtration than most drinking
+                                    water
+                                    filters!
+                                </p>
+                                <!--<a href="#" class="button medium otln-white">How it Works</a>-->
+                            </section>
+                        </div>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
     </div>
@@ -147,7 +166,7 @@
             <div class="shadow-top"></div>
             <div class="grid-x grid-margin-x align-center clearfix">
                 <div class="cell large-6 medium-10 small-12 center-all image title-h3">
-                    <img data-echo="img/less-chemicals-icon.png" width="133" height="182" alt="less chemicals"
+                    <img src="img/less-chemicals-icon.png" width="133" height="182" alt="less chemicals"
                         id="less-chemicals">
                     <h2>Fewer Chemicals for a</h2>
                     <h3><span>Healthier</span> Clean</h3>
@@ -181,7 +200,7 @@
                 <div class="cell large-7 medium-6 small-12">
                     <img src="img/190-cubic-inches.png" width="247" height="246" alt="190 cubic inch debris capacity"
                         id="debris-capacity-badge">
-                    <img data-echo="img/pool-cleaner-filter.jpg" width="723" height="614" alt="pool cleaner filter"
+                    <img src="img/pool-cleaner-filter.jpg" width="723" height="614" alt="pool cleaner filter"
                         id="filtration-img" class="absolute z-back">
                 </div>
             </div>
@@ -191,8 +210,8 @@
         <section id="micro-brushes" class="bg-white relative">
             <div class="grid-x grid-margin-x clearfix wrapper">
                 <div class="cell large-7 medium-6 small-12">
-                    <img data-echo="img/micro-brush-cleaning.jpg" width="996" height="815" alt="micro-brushes"
-                         id="micro-brushes-img">
+                    <img src="img/micro-brush-cleaning.jpg" width="996" height="815" alt="micro-brushes"
+                        id="micro-brushes-img">
                 </div>
                 <div class="cell large-5 medium-6 small-12 float-right title-h2">
                     <h3>Like a Fine-Tooth Comb</h3>
@@ -220,9 +239,8 @@
                     <div class="cell large-3 medium-6 small-12 feature30 relative">
                         <div class="center-all title-h2">
                             <div class="feature30-img">
-                                <img data-echo="img/aquabot-caddy.png" width="255" height="320" alt="aquabot caddy">
+                                <img src="img/aquabot-caddy.png" width="255" height="320" alt="aquabot caddy">
                             </div>
-                            <h3></h3>
                             <h2>Pool Robot <span>Caddy</span></h2>
                             <p>An included Robot Caddy makes transporting the X4 to and from your pool easier than ever.
                                 The
@@ -235,7 +253,7 @@
                     <div class="cell large-3 medium-6 small-12 feature30 feature30-middle relative">
                         <div class="center-all title-h2">
                             <div class="feature30-img relative">
-                                <img data-echo="img/4-wheel-drive-pool-cleaner.png" width="255" height="206"
+                                <img src="img/4-wheel-drive-pool-cleaner.png" width="255" height="206"
                                     alt="aquabot 4 wheel drive" id="performance-preview-image">
                             </div>
                             <h3>Performance</h3>
@@ -251,7 +269,7 @@
                     <div class="cell large-3 medium-12 small-12 feature30 relative">
                         <div class="center-all title-h2">
                             <div class="feature30-img">
-                                <img data-echo="img/ease-of-use.png" width="255" height="226" alt="aquabot caddy">
+                                <img src="img/ease-of-use.png" width="255" height="226" alt="aquabot caddy">
                             </div>
                             <h3>Ease-of-Use</h3>
                             <h2><span>Simple</span> Operation</h2>
@@ -266,15 +284,6 @@
             </div>
         </section>
     </div>
-    <style>
-        .model-type {
-            font-size: 18px !important;
-        }
-
-        .model-preview p {
-            font-size: 17px;
-        }
-    </style>
     <!--  
         <section id="extreme-family" class="bg-white relative">
 
@@ -325,24 +334,24 @@
                 <div class="cell large-8 medium-8 small-12 title-h2 clearfix">
                     <div id="quotes-rotator" class="rw-words relative z-front">
                         <div title="1">
-                            <h5 class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h5>
+                            <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
                             <h3>"This robot cleans well, easy to clean. Cleans the whole pool in 3 hours and very simple
                                 to run, place in the pool, and remove."</h3>
                             <h4 class="name">Kanoland</h4>
                             <h6 class="location">San Antonio, TX</h6>
                         </div>
                         <div title="2">
-                            <h5 class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h5>
+                            <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
                             <h3>"My husband loves this! Such a breeze keeping our pool clean now. Easy to work and works
                                 great. Worth the money"</h3>
                             <h4 class="name">Jaime</h4>
                             <h6 class="location">Akron, OH</h6>
                         </div>
                         <div title="3">
-                            <h5 class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></h5>
+                            <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
                             <h3>"We took it out of the box, put it in the water, plugged it in, and in 3 hours the pool
                                 was spotless. Simple to use. I highly recommend this product."</h3>
                             <h4 class="name">Scott S.</h4>
@@ -395,17 +404,16 @@
                                 Brochure</a></li>
                         <li><a href="/warranty#register">Register Your Warranty</a></li>
                     </ul>
-                    </li>
                 </div>
             </div>
         </footer><!-- #EndLibraryItem -->
-    </div><!-- max wrapper-->
+    </div>
 
     <script src="//use.typekit.net/fzb6psq.js"></script>
     <script>try { Typekit.load(); } catch (e) { }</script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="js/plugins.js"></script>
-    <script type="text/javascript">
+    <script>
         // MyBox Script
         var x = document.getElementsByClassName('myBox');
         for (var i = 0; i < x.length; i++) {
@@ -418,11 +426,10 @@
             throttle: 10,
             unload: false
         });
-// echo.render(); is also available for non-scroll callbacks
-
+        // echo.render(); is also available for non-scroll callbacks
     </script>
 
-    <script type="text/javascript">
+    <script>
         // Rotator
         (function ($) {
             $.fn.fixOverflow = function () {

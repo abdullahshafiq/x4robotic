@@ -1,9 +1,0 @@
-@media (min-width: 1300px) {
-	#banner { height: 775px;}
-	#product-stage {height: 570px;}
-	#right-wrapper {margin-top: 20px;}
-	#selection-box {height: 450px;}
-	.options {height: 315px;}
-	#configured-price h3{font-size: 30px;	padding: 9px 0 0 0;}
-	#financed-price, #shipping-date {padding:0 20px;}
-}
