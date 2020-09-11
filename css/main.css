@@ -518,7 +518,7 @@ header{grid-template-columns:1fr auto 1fr!important;padding:.5rem 4rem!important
 #aquabot-shadow{bottom:15px;}
 #banner-text{padding-top:140px;}
 .block-wrapper,#our-passion,section,.feature30,footer{padding:2em 0!important;}
-.feature30,#footer-hook,.block-wrapper{padding:2em!important;}
+.feature30,#footer-hook{padding:2em!important;}
 #micro-brushes{padding:0 0 2em;}
 #banner-bottom,.down-arrow,#plus{display:none;}
 .under-water,#sub-banner{background-size:cover !important;}
