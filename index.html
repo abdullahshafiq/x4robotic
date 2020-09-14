@@ -15,18 +15,22 @@
     <link rel="shortcut icon" href="/favicon.png">
     <link rel="icon" sizes="16x16 32x32" href="/favicon.png">
 
+    <!-- Preload Prefetch and Preconnect -->
+
+    <link rel="preload"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0" as="font"
+        crossorigin>
+
     <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com">
     <link rel="preconnect" href="https://use.typekit.net">
     <link rel="preconnect" href="https://ajax.googleapis.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href=" https://www.google-analytics.com">
 
-    <!--[if IE]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script>
+    <script type="text/javascript">
         (function (e, t) { if (typeof define === "function" && define.amd) { define(function () { return t(e) }) } else if (typeof exports === "object") { module.exports = t } else { e.echo = t(e) } })(this, function (e) { "use strict"; var t = {}; var n = function () { }; var r, i, s, o, u; var a = function (e, t) { var n = e.getBoundingClientRect(); return n.right >= t.l && n.bottom >= t.t && n.left <= t.r && n.top <= t.b }; var f = function () { if (!o && !!i) { return } clearTimeout(i); i = setTimeout(function () { t.render(); i = null }, s) }; t.init = function (i) { i = i || {}; var a = i.offset || 0; var l = i.offsetVertical || a; var c = i.offsetHorizontal || a; var h = function (e, t) { return parseInt(e || t, 10) }; r = { t: h(i.offsetTop, l), b: h(i.offsetBottom, l), l: h(i.offsetLeft, c), r: h(i.offsetRight, c) }; s = h(i.throttle, 250); o = i.debounce !== false; u = !!i.unload; n = i.callback || n; t.render(); if (document.addEventListener) { e.addEventListener("scroll", f, false); e.addEventListener("load", f, false) } else { e.attachEvent("onscroll", f); e.attachEvent("onload", f) } }; t.render = function () { var i = document.querySelectorAll("img[data-echo]"); var s = i.length; var o, f; var l = { l: 0 - r.l, t: 0 - r.t, b: (e.innerHeight || document.documentElement.clientHeight) + r.b, r: (e.innerWidth || document.documentElement.clientWidth) + r.r }; for (var c = 0; c < s; c++) { f = i[c]; if (a(f, l)) { if (u) { f.setAttribute("data-echo-placeholder", f.src) } $(f).css("opacity", "0"); f.src = f.getAttribute("data-echo"); $(f).animate({ opacity: "1" }, { speed: 1e3 }); if (!u) { f.removeAttribute("data-echo") } n(f, "load") } else if (u && !!(o = f.getAttribute("data-echo-placeholder"))) { f.src = o; f.removeAttribute("data-echo-placeholder"); n(f, "unload") } } if (!s) { t.detach() } }; t.detach = function () { if (document.removeEventListener) { e.removeEventListener("scroll", f) } else { e.detachEvent("onscroll", f) } clearTimeout(i) }; return t })
     </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
     <script>
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -40,7 +44,6 @@
 
     </script>
 </head>
-
 <body>
     <!-- HEADER START -->
     <div class="grid-container">
