@@ -3140,7 +3140,11 @@ h2 span {
     padding: 4em 0;
 }
 
-.more-features h4, #title-banner h4, #title-banner2 h4, #specifications h4, #title-banner4 h4 {
+.more-features h4,
+#title-banner h4,
+#title-banner2 h4,
+#specifications h4,
+#title-banner4 h4 {
     display: block;
     text-align: center;
     width: 100%;
@@ -3226,6 +3230,42 @@ h2 span {
     margin: 0;
 }
 
+/*! FOOTER */
+
+footer {
+    background: #1e3e5f;
+    padding: 5em 1em;
+}
+
+footer p {
+    font-size: .6em;
+    color: #ccc;
+    margin-top: 2em;
+}
+
+footer ul {
+    padding: 0;
+    margin: 0 0 1em;
+    list-style: none;
+    text-decoration: none;
+}
+
+footer ul li {
+    color: #35A7E3;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+footer ul li a {
+    text-decoration: none;
+    font-weight: 300;
+    color: #fff;
+    font-size: .8em;
+    font-family: "museo-sans", Helvetica, Arial, sans-serif;
+    text-transform: none;
+}
+
 
 /********************************************************************! MEDIA QUERIES */
 
@@ -3262,9 +3302,12 @@ h2 span {
     .banner-text h3 {
         font-size: 2em;
     }
-
     .robot-banner {
         padding-bottom: 25px;
+    }
+    footer {
+        padding: 2em 0;
+        text-align: center;
     }
 }
 
