@@ -30,7 +30,7 @@
     <script type="text/javascript">
         (function (e, t) { if (typeof define === "function" && define.amd) { define(function () { return t(e) }) } else if (typeof exports === "object") { module.exports = t } else { e.echo = t(e) } })(this, function (e) { "use strict"; var t = {}; var n = function () { }; var r, i, s, o, u; var a = function (e, t) { var n = e.getBoundingClientRect(); return n.right >= t.l && n.bottom >= t.t && n.left <= t.r && n.top <= t.b }; var f = function () { if (!o && !!i) { return } clearTimeout(i); i = setTimeout(function () { t.render(); i = null }, s) }; t.init = function (i) { i = i || {}; var a = i.offset || 0; var l = i.offsetVertical || a; var c = i.offsetHorizontal || a; var h = function (e, t) { return parseInt(e || t, 10) }; r = { t: h(i.offsetTop, l), b: h(i.offsetBottom, l), l: h(i.offsetLeft, c), r: h(i.offsetRight, c) }; s = h(i.throttle, 250); o = i.debounce !== false; u = !!i.unload; n = i.callback || n; t.render(); if (document.addEventListener) { e.addEventListener("scroll", f, false); e.addEventListener("load", f, false) } else { e.attachEvent("onscroll", f); e.attachEvent("onload", f) } }; t.render = function () { var i = document.querySelectorAll("img[data-echo]"); var s = i.length; var o, f; var l = { l: 0 - r.l, t: 0 - r.t, b: (e.innerHeight || document.documentElement.clientHeight) + r.b, r: (e.innerWidth || document.documentElement.clientWidth) + r.r }; for (var c = 0; c < s; c++) { f = i[c]; if (a(f, l)) { if (u) { f.setAttribute("data-echo-placeholder", f.src) } $(f).css("opacity", "0"); f.src = f.getAttribute("data-echo"); $(f).animate({ opacity: "1" }, { speed: 1e3 }); if (!u) { f.removeAttribute("data-echo") } n(f, "load") } else if (u && !!(o = f.getAttribute("data-echo-placeholder"))) { f.src = o; f.removeAttribute("data-echo-placeholder"); n(f, "unload") } } if (!s) { t.detach() } }; t.detach = function () { if (document.removeEventListener) { e.removeEventListener("scroll", f) } else { e.detachEvent("onscroll", f) } clearTimeout(i) }; return t })
     </script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <script>
             (function (i, s, o, g, r, a, m) {
@@ -185,11 +185,11 @@
 
     <!-- ENHANCED FILTRATION START -->
     <div class="grid-container">
-        <section class="filtration">
+        <div class="filtration">
             <div class="grid-x grid-margin-x align-center-middle">
                 <div class="cell large-11 medium-11 small-12">
-                    <div class="grid-x grid-margin-x align-center-middle">
-                        <div class="cell large-5 medium-12 small-12">
+                    <div class="grid-x align-center-middle">
+                        <div class="cell large-6 medium-12 small-12 text small-order-2 medium-order-1">
                             <h4>Taking it All in</h4>
                             <h1><span>Enhanced</span> Filtration</h1>
                             <p>Best-in-class filters handle more dirt and debris than any other cleaning method. Two
@@ -206,21 +206,21 @@
                                 look
                                 cleaner; it’s the cleanest it can be. </p>
                         </div>
-                        <div class="cell large-7 medium-12 small-12 align-self-middle text-center">
+                        <div
+                            class="cell large-6 medium-12 small-12 align-self-middle text-center small-order-1 medium-order-2">
                             <img src="img/pool-cleaner-filter.jpg" width="723" height="724" alt="pool cleaner filter">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="filtration">
             <div class="grid-x grid-margin-x align-center-middle">
                 <div class="cell large-11 medium-11 small-12">
-                    <div class="grid-x grid-margin-x align-center-middle align-self-bottom">
-                        <div class="cell large-7 medium-12 small-12 text-center">
+                    <div class="grid-x align-center-middle align-self-bottom">
+                        <div
+                            class="cell large-6 medium-12 small-12 align-self-bottom text-center small-order-2 medium-order-1">
                             <img src="img/micro-brush-cleaning.jpg" width="996" height="815" alt="micro-brushes">
                         </div>
-                        <div class="cell large-5 medium-12 small-12">
+                        <div class="cell large-6 medium-12 small-12 text small-order-1 medium-order-2">
                             <h4>Like a Fine-Tooth Comb</h4>
                             <h1><span>Performance</span> Cleaning</h1>
                             <p>Typically, only 1% of pool contaminants are suspended in the water. Our goal is to enable
@@ -239,11 +239,13 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
+    <!-- ENHANCED FILTRATION ENDS -->
+
     <!-- FEATURES AND OPTIONS START -->
     <div class="grid-container">
-        <div class="more-features relative">
+        <div id="more-features" class="more-features relative">
             <h4>Explore More Features &amp; Options</h4>
             <div class="down-arrow">
                 <p class="isoscelesDown-blue">This is an isosceles triangle pointing downwards.</p>
@@ -334,43 +336,65 @@
         </div>
     </div>
     <div class="grid-container">
-        <section id="footer-hook">
+        <section>
             <div class="grid-x">
-                <div class="cell large-8 medium-8 small-12">
-                    <div id="quotes-rotator">
-                        <div title="1">
-                            <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
-                            <h3>"This robot cleans well, easy to clean. Cleans the whole pool in 3 hours and very simple
-                                to run, place in the pool, and remove."</h3>
-                            <h4 class="name">Kanoland</h4>
-                            <h6 class="location">San Antonio, TX</h6>
-                        </div>
-                        <div title="2">
-                            <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
-                            <h3>"My husband loves this! Such a breeze keeping our pool clean now. Easy to work and works
-                                great. Worth the money"</h3>
-                            <h4 class="name">Jaime</h4>
-                            <h6 class="location">Akron, OH</h6>
-                        </div>
-                        <div title="3">
-                            <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
-                            <h3>"We took it out of the box, put it in the water, plugged it in, and in 3 hours the pool
-                                was spotless. Simple to use. I highly recommend this product."</h3>
-                            <h4 class="name">Scott S.</h4>
-                            <h6 class="location">Sun Valley, CA</h6>
+                <div class="cell large-7 medium-7 small-12">
+                    <div class="grid-x grid-margin-x align-center-middle">
+                        <div class="cell large-10 medium-10 small-12">
+                            <div id="quotes-rotator">
+                                <div title="1">
+                                    <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i></span>
+                                    <h3>"This robot cleans well, easy to clean. Cleans the whole pool in 3 hours and
+                                        very
+                                        simple
+                                        to run, place in the pool, and remove."</h3>
+                                    <h4 class="name">Kanoland</h4>
+                                    <h6 class="location">San Antonio, TX</h6>
+                                </div>
+                                <div title="2">
+                                    <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i></span>
+                                    <h3>"My husband loves this! Such a breeze keeping our pool clean now. Easy to work
+                                        and
+                                        works
+                                        great. Worth the money"</h3>
+                                    <h4 class="name">Jaime</h4>
+                                    <h6 class="location">Akron, OH</h6>
+                                </div>
+                                <div title="3">
+                                    <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                            class="fa fa-star"></i></span>
+                                    <h3>"We took it out of the box, put it in the water, plugged it in, and in 3 hours
+                                        the
+                                        pool
+                                        was spotless. Simple to use. I highly recommend this product."</h3>
+                                    <h4 class="name">Scott S.</h4>
+                                    <h6 class="location">Sun Valley, CA</h6>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="financing" class="cell large-4 medium-4 small-12 align-right">
-                    <h2>Go Extreme Today.</h2>
-                    <h3>We're Somewhere <br><span>Near You.</span></h3>
-                    <p>Our vast dealer network gives you easy access to Aquabot&reg; products and services no matter
-                        where you call home. Available in over 42 countries with over 1200 dealers, you wont have far to
-                        go.</p>
-                    <a href="/find-a-dealer" class="button medium btn-gold">Shop Now</a>
+                <div class="cell large-5 medium-5 small-12 align-right">
+                    <div class="grid-x grid-margin-x align-center-middle">
+                        <div class="cell large-8 medium-10 small-12">
+                            <div class="financing">
+                                <h4>Go Extreme Today.</h4>
+                                <h2>We're Somewhere <br><span>Near You.</span></h2>
+                                <p>Our vast dealer network gives you easy access to Aquabot&reg; products and services
+                                    no matter
+                                    where you call home. Available in over 42 countries with over 1200 dealers, you wont
+                                    have
+                                    far to
+                                    go.</p>
+                                <a href="/find-a-dealer" class="button primary golden">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

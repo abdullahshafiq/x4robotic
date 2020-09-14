@@ -146,7 +146,7 @@ z-index:999999;/* makes sure it stays on top */
 .bg-white .title-h3 h2,.bg-white .title-h2 h3,.bg-light-blue .title-h3 h2,.bg-light-blue .title-h2 h3{color:#666;}
 
 #micro-brushes{padding-top:70px;}
-#filtration-img{bottom:-5%;height:100%;width:auto;left:50%;}
+
 #micro-brushes-img{bottom:-23%;height:126%;width:auto;left:1%;position:absolute;}
 
 
@@ -200,15 +200,11 @@ z-index:999999;/* makes sure it stays on top */
 
 
 #review-title{color:#fff;position:absolute;background:#007bc2;position:absolute;top:90px;left:0;padding:10px 5px 10px 6%;z-index:11;text-transform:uppercase;}
-#filtration{padding-top:20px;}
+
 .rightAngle-review{width:0;height:0;text-indent:-9999px;border-top:55px solid #007bc2;border-right:45px solid transparent;position:absolute;right:-45px;padding:0;margin:0;top:0;}
 #advanced-micro-brush-image{top:0;left:56%;height:95%;width:auto;}
 #family-pool{height:100%;bottom:0;right:30%;width:auto;}
-#financing{padding:3%;background:#fff;border-radius:6px;}
-#financing h2{font-size:22px;color:#666;font-weight:300;margin:0;padding:0;letter-spacing:.02em;}
-#financing h3{color:#464646;text-transform:uppercase;margin:0;margin-bottom:20px;padding:0;font-size:30px;line-height:1em;}
-#financing h3 span{color:#35A7E3;}
-#financing p{font-size:16px;}
+
 #pool-filter-img{height:100%;width:auto;right:50%;bottom:0;}
 #drive4robots{top:-10%;right:51%;height:110%;width:auto;}
 #four-wheel-drive{padding:5em 0 10em;}
