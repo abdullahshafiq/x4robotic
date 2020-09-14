@@ -214,7 +214,6 @@ html {
 ::after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
-    font-family: "museo-sans-condensed", Helvetica, Arial, sans-serif;
 }
 
 body {
