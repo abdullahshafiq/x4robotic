@@ -3334,14 +3334,6 @@ h2 span {
     border-top: 30px solid #c7e1fb;
 }
 
-.more-features .down-arrow,
-#title-banner .down-arrow,
-#title-banner2 .down-arrow,
-#specifications .down-arrow,
-#title-banner4 .down-arrow {
-    top: 55px;
-}
-
 /*! QUOTES ROTATOR */
 
 
@@ -3355,7 +3347,6 @@ h2 span {
     color: #28a3f5;
     font-size: 40px;
     padding: 0 5px;
-    /*text-shadow: 0 0 7px #fff;*/
 }
 
 #quotes-rotator h3 {
