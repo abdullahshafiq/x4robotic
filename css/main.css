@@ -79,7 +79,7 @@ z-index:999999;/* makes sure it stays on top */
 .btn-gold.small{padding-bottom:8px;}
 .btn-gold.medium{padding-bottom:10px;}
 .btn-gold.large{padding-bottom:11px;}
-.bg-white{background:#fff;}
+
 .fade-blue{background-color:#E6F3FF;background-image:linear-gradient(to top,#f0f8ff 0%,#FFF 100%);}
 
 .overflow-hidden{overflow:hidden;}
@@ -95,8 +95,7 @@ z-index:999999;/* makes sure it stays on top */
 #logo h3 span{font-size:12px;vertical-align:text-top;}
 
 
-.bg-blue{background:#007bc2;}
-.bg-grey{background:#EDEDED;}
+
 
 #banner{overflow:hidden;}
 #banner{background:url(../img/banner-home-background.jpg) center bottom no-repeat;height:auto;background-size:cover;}
@@ -124,9 +123,7 @@ z-index:999999;/* makes sure it stays on top */
 #standard-page #sub-banner-text h1{font-size:55px;}
 #standard-page #sub-banner-text p{margin-bottom:0;padding-bottom:0;}
 #sub-banner-text p{font-size:22px;}
-.rightAngle{width:0;height:0;text-indent:-9999px;border-top:90px solid #fff;border-left:45px solid transparent;position:absolute;left:-45px;padding:0;margin:0;top:0;}
-.rightAngle-short{width:0;height:0;text-indent:-9999px;border-top:40px solid #fff;border-left:45px solid transparent;position:absolute;padding:0;margin:0;top:-2px;right:50%;}
-.leftAngle-short{width:0;height:0;text-indent:-9999px;border-top:40px solid #007bc2;border-right:45px solid transparent;position:absolute;padding:0;margin:0;top:-2px;left:50%;}
+
 
 .dark .title{color:#35A7E3;}
 .dark .subtext{color:#fff;}
@@ -139,18 +136,14 @@ z-index:999999;/* makes sure it stays on top */
 .title{font-size:55px;text-transform:uppercase;}
 
 
-.bg-white .title-h3 h3 span,.bg-white .title-h2 h2 span,.bg-light-blue .title-h3 h3 span,.bg-light-blue .title-h2 h2 span,.fade-blue .title-h2 h2 span,.under-water .title-h2 h2 span{color:#007bc2;}
-#swivel-img{top:0;height:100%;width:auto;left:50%;}
-.bg-white .title-h3 h3 em,.bg-white .title-h2 h2 em,.bg-light-blue .title-h3 h3 em,.bg-light-blue .title-h2 h2 em{font-size:.5em;font-style:normal;vertical-align:super;}
 
-.bg-white .title-h3 h2,.bg-white .title-h2 h3,.bg-light-blue .title-h3 h2,.bg-light-blue .title-h2 h3{color:#666;}
 
 #micro-brushes{padding-top:70px;}
 
 #micro-brushes-img{bottom:-23%;height:126%;width:auto;left:1%;position:absolute;}
 
 
-.bg-white .title-h2 h2{color:#464646;}
+
 
 
 .bg-blue .title-h3 h3{color:#fff;}

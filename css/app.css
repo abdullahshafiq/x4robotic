@@ -47,6 +47,7 @@ pre {
 
 a {
     background-color: transparent;
+    color: #21bdf1;
 }
 
 abbr[title] {
@@ -2976,7 +2977,6 @@ nav a:hover {
     line-height: 1;
     text-decoration: none;
     display: block;
-    padding: 1rem 1.5rem;
 }
 
 .button.primary {
@@ -3003,15 +3003,9 @@ img {
     vertical-align: middle;
 }
 
-.button.hollow.white {
-    border-color: #fff;
-    background-color: transparent;
-}
-
 .button.hollow.primary:focus,
 .button.hollow.primary:hover {
-    border-color: #fff;
-    color: #fff;
+    opacity: .6;
 }
 
 .button.hollow.primary,
@@ -3019,14 +3013,13 @@ img {
 .button.hollow:focus[disabled],
 .button.hollow:hover.disabled,
 .button.hollow:hover[disabled] {
-    border: 1px solid #fff;
-    color: #fff;
+    border: 3px solid #35A7E3;
+    color: #35A7E3;
 }
 
 .button.hollow:focus,
 .button.hollow:hover {
-    border-color: #fff;
-    color: #fff;
+    opacity: .6;
 }
 
 a.button,
@@ -3095,6 +3088,51 @@ h2 span {
 .home-fold .bg-blue h1,
 .home-fold .bg-blue p {
     color: #fff;
+}
+
+/*! BASIC ELEMENTS */
+
+.bg-white {
+    background: #fff;
+}
+
+.bg-blue {
+    background: #007bc2;
+}
+
+.bg-grey {
+    background: #EDEDED;
+}
+
+.angle {
+    width: 0;
+    height: 0;
+    text-indent: -9999px;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+
+.rightAngle {
+    border-top: 90px solid #fff;
+    border-left: 45px solid transparent;
+    left: -45px;
+    top: 0;
+}
+
+.rightAngle-short {
+    border-top: 40px solid #fff;
+    border-left: 45px solid transparent;
+    top: -2px;
+    right: 50%;
+}
+
+.leftAngle-short {
+    text-indent: -9999px;
+    border-top: 40px solid #007bc2;
+    border-right: 45px solid transparent;
+    top: -2px;
+    left: 50%;
 }
 
 
@@ -3192,6 +3230,12 @@ h2 span {
 }
 
 /*! HOME - Fold */
+
+.home-fold img {
+    width: 80px;
+    height: auto;
+    padding-bottom: 20px;
+}
 
 .home-fold h1 {
     font-size: 2.5em;
