@@ -29,8 +29,17 @@ body {
 }
 
 p {
-    font-size: 1em;
+    font-size: .9em;
     font-weight: 200;
+    color: #333;
+    margin: 1em 0;
+    line-height: 1.4em;
+    font-family: "museo-sans", Helvetica, Arial, sans-serif;
+}
+
+em {
+    font-style: normal;
+    vertical-align: text-top;
 }
 
 hr {
@@ -2715,6 +2724,122 @@ section {
     right: 0;
 }
 
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+/*! Margin helpers*/
+
+.margin-2 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/*! ObjectFit helpers*/
+
+.object-fit {
+    width: auto;
+    height: 100%;
+}
+
+.object-fit.cover {
+    object-fit: cover;
+}
+
+.object-fit.contain {
+    object-fit: contain;
+}
+
+.object-fit.left {
+    object-position: left;
+}
+
+.object-fit.right {
+    object-position: right;
+}
+
+.object-fit.center {
+    object-position: center;
+}
+
+.object-fit.bottom {
+    object-position: bottom;
+}
+
+/* Visibility Classes */
+
+@media print,
+screen and (max-width: 39.99875em) {
+    .hide-for-small-only {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 0em),
+screen and (min-width: 40em) {
+    .show-for-small-only {
+        display: none !important;
+    }
+}
+
+@media print,
+screen and (min-width: 40em) {
+    .hide-for-medium {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 39.99875em) {
+    .show-for-medium {
+        display: none !important;
+    }
+}
+
+@media print,
+screen and (min-width: 40em) and (max-width: 63.99875em) {
+    .hide-for-medium-only {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 39.99875em),
+screen and (min-width: 64em) {
+    .show-for-medium-only {
+        display: none !important;
+    }
+}
+
+@media print,
+screen and (min-width: 64em) {
+    .hide-for-large {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 63.99875em) {
+    .show-for-large {
+        display: none !important;
+    }
+}
+
+@media print,
+screen and (min-width: 64em) and (max-width: 74.99875em) {
+    .hide-for-large-only {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 63.99875em),
+screen and (min-width: 75em) {
+    .show-for-large-only {
+        display: none !important;
+    }
+}
+
 /*! Header */
 #site-header {
     padding: .5rem 0 .1rem;
@@ -2813,6 +2938,7 @@ header {
     position: fixed !important;
     max-width: 105rem;
     top: 0;
+    z-index: 99999;
 }
 
 .nav-toggle {
@@ -2937,7 +3063,7 @@ nav a:hover {
 /*! Buttons */
 .button {
     display: inline-block;
-    margin: 0 .5rem;
+    margin: 0;
     padding: .85em 1.5em;
     -webkit-appearance: none;
     border-radius: 6px;
@@ -2989,6 +3115,11 @@ nav a:hover {
     color: #724c20;
     border: none;
     box-shadow: 0 4px 0 #B57F32;
+}
+
+.button.dblue {
+    color: #007BC2;
+    border: 4px solid #007BC2;
 }
 
 .button.golden:focus,
@@ -3067,6 +3198,9 @@ h2,
     font-size: 1.8em;
 }
 
+h3,
+.h3 {}
+
 h4,
 .h4 {
     color: #666;
@@ -3090,6 +3224,16 @@ h2 span {
     color: #fff;
 }
 
+h4 em {
+    font-size: 0.5em;
+}
+
+h2 em {
+    font-size: .5em;
+    font-style: normal;
+    vertical-align: super;
+}
+
 /*! BASIC ELEMENTS */
 
 .bg-white {
@@ -3102,6 +3246,10 @@ h2 span {
 
 .bg-grey {
     background: #EDEDED;
+}
+
+.bg-light-blue {
+    background: #c7e1fb;
 }
 
 .angle {
@@ -3133,6 +3281,23 @@ h2 span {
     border-right: 45px solid transparent;
     top: -2px;
     left: 50%;
+}
+
+.padding-b-z {
+    padding-bottom: 0 !important;
+}
+
+.padding-t-z {
+    padding-top: 0 !important;
+}
+
+.sticky-wrapper {
+    transition: all .74s;
+}
+
+.under-water {
+    background-size: cover;
+    background: url(../img/healthier-clean-background.jpg) center center no-repeat fixed;
 }
 
 
@@ -3269,6 +3434,7 @@ h2 span {
     left: 0;
     right: 0;
     text-align: center;
+    z-index: 1;
 }
 
 /*! HOME - Our Passion */
@@ -3325,24 +3491,97 @@ h2 span {
     padding: 4em 0;
 }
 
-.more-features h4,
-#title-banner h4,
-#title-banner2 h4,
-#specifications h4,
-#title-banner4 h4 {
-    display: block;
-    text-align: center;
-    width: 100%;
-    padding: 12px 0;
-    margin: 0;
-    color: #fff;
+
+
+/*! PRODUCT - Overview */
+
+.overview h2 {
     font-size: 1.4em;
+}
+
+.overview h2 span {
+    color: #35A7E3;
+}
+
+.overview p {
+    font-family: "museo-sans", Helvetica, Arial, sans-serif;
+}
+
+.overview a {
+    color: #35A7E3;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+/*! PRODUCT - AQUABOT X4 */
+
+.aquabot-features h2 {
+    font-size: 2.8em;
+    line-height: 1em;
+}
+
+.aquabot-features h3 {
+    font-size: 1.5em;
+    color: #666;
+    font-weight: 300;
+}
+
+/*! PRODUCT - Swivel */
+
+.robotic-pool-caddy-img {
+    bottom: 0;
+    right: 50%;
+    height: 909px;
+    width: auto;
+}
+
+/*! PRODUCT - Specs Table */
+
+.specs-table td .fa {
+    color: #fff !important;
+}
+
+.specs-table {
     background: #007bc2;
-    text-transform: uppercase;
-    font-weight: 600;
+    padding: 1em;
+}
+
+.specs-table table {
+    width: 100%;
+}
+
+.specs-table table tr td {
+    border-bottom: 1px solid #DDD;
+    color: #fff;
+    padding: 1em 0;
+}
+
+.specs-table table tr:last-of-type td {
+    border-bottom: none;
+}
+
+.specs-table table tr td {
+    font-size: 1em;
+    padding: 1em;
+    letter-spacing: .04em;
+}
+
+.specs-table table tr td:first-child {
+    border-right: 1px solid #DDD;
+    font-weight: 700;
+}
+
+.specs-table table tr td:last-child {
+    font-weight: 300;
 }
 
 /*! ISOSCELES */
+
+.stuck {
+    position: fixed !important;
+    top: 100px !important;
+    width: 105rem;
+}
 
 .isoscelesDown,
 .isoscelesDown-white,
@@ -3378,8 +3617,66 @@ h2 span {
     border-top: 30px solid #c7e1fb;
 }
 
-/*! QUOTES ROTATOR */
+#title-banner2 .down-arrow .isoscelesDown-blue {
+    border-top: 30px solid #1e3e5f;
+}
 
+#specifications .down-arrow .isoscelesDown-blue {
+    border-top: 30px solid #1e3e5f;
+}
+
+#title-banner4 .down-arrow .isoscelesDown-blue {
+    border-top: 30px solid #28a3f5;
+}
+
+.more-features h4,
+#title-banner h4,
+#title-banner2 h4,
+#specifications h4,
+#title-banner4 h4 {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 12px 0;
+    margin: 0;
+    color: #fff;
+    font-size: 1.2em;
+    background: #007bc2;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#title-banner4 {
+    z-index: 10002;
+}
+
+#title-banner2 {
+    z-index: 10000;
+}
+
+#title-banner2 h4 {
+    background: #5aabe1;
+}
+
+#title-banner4 h4 {
+    background: #28a3f5;
+}
+
+#title-banner,
+#title-banner2,
+#specifications,
+#title-banner4 {
+    z-index: 9999;
+    transition: all .5s;
+    top: 0;
+    padding: 0;
+}
+
+#specifications h4 {
+    background: #1e3e5f;
+}
+
+/*! QUOTES ROTATOR */
 
 #quotes-rotator {
     text-align: left;
@@ -3416,6 +3713,51 @@ h2 span {
     font-weight: 300;
     font-family: "museo-sans", Helvetica, Arial, sans-serif;
     margin: 0;
+}
+
+/*! SUB BANNERS */
+
+.sub-banner {
+    padding: 10em 0 5em;
+    background-size: cover;
+    background: url(../img/healthier-clean-background.jpg) center center no-repeat;
+}
+
+.sub-banner h1 {
+    font-weight: 600;
+    line-height: .85em;
+    margin-bottom: .3em;
+    color: #35A7E3;
+    font-size: 3.5em;
+}
+
+.sub-banner h1 span {
+    color: #007BC2;
+}
+
+.sub-banner h4 {
+    color: #505050;
+    line-height: .85em;
+    margin-bottom: .2em;
+}
+
+.sub-banner p {
+    font-size: 1.1em;
+    font-family: "museo-sans", Helvetica, Arial, sans-serif;
+}
+
+.products-page .sub-banner {
+    background: url(../img/features-background.jpg) center bottom no-repeat;
+    padding: 10em 0;
+}
+
+.products-page .sub-banner h1 {
+    font-size: 5em;
+}
+
+.products-page .sub-banner .button {
+    margin: 0;
+    padding: 1em 1.5em;
 }
 
 /*! FOOTER HOOK */
@@ -3462,7 +3804,7 @@ footer ul li a {
     text-transform: none;
 }
 
-/********************************************************************! MEDIA QUERIES */
+/*! MEDIA QUERIES */
 
 /* Small only */
 @media only screen and (min-width : 10em) and (max-width : 39.9375em) {
@@ -3498,6 +3840,10 @@ footer ul li a {
         font-size: 2em;
     }
 
+    .products-page .sub-banner h1 {
+        font-size: 3em;
+    }
+
     .robot-banner {
         padding-bottom: 25px;
     }
@@ -3519,6 +3865,30 @@ footer ul li a {
     section {
         padding: 2rem 0;
     }
+
+    .sub-banner,
+    .products-page .sub-banner {
+        padding: 7em 0 3em;
+        background-position: top center;
+    }
+
+    .overview {
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .stuck {
+        width: 100%;
+        top: 70px;
+    }
+
+    .object-fit {
+        height: auto;
+    }
+
+    .object-fit.cover {
+        object-fit: contain;
+    }
 }
 
 /* Medium and up */
@@ -3530,83 +3900,28 @@ footer ul li a {
     .banner-text h3 {
         font-size: 3em;
     }
+
+    .overview {
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .stuck {
+        width: 100%;
+    }
 }
 
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {}
 
 /* Large and up */
-@media screen and (min-width: 64em) {}
+@media screen and (min-width: 64em) {
+    .overview {
+        text-align: left;
+        padding-top: 0;
+    }
+
+}
 
 /* Large only */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {}
-
-/* Visibility Classes */
-
-@media print,
-screen and (max-width: 39.99875em) {
-    .hide-for-small-only {
-        display: none !important;
-    }
-}
-
-@media screen and (max-width: 0em),
-screen and (min-width: 40em) {
-    .show-for-small-only {
-        display: none !important;
-    }
-}
-
-@media print,
-screen and (min-width: 40em) {
-    .hide-for-medium {
-        display: none !important;
-    }
-}
-
-@media screen and (max-width: 39.99875em) {
-    .show-for-medium {
-        display: none !important;
-    }
-}
-
-@media print,
-screen and (min-width: 40em) and (max-width: 63.99875em) {
-    .hide-for-medium-only {
-        display: none !important;
-    }
-}
-
-@media screen and (max-width: 39.99875em),
-screen and (min-width: 64em) {
-    .show-for-medium-only {
-        display: none !important;
-    }
-}
-
-@media print,
-screen and (min-width: 64em) {
-    .hide-for-large {
-        display: none !important;
-    }
-}
-
-@media screen and (max-width: 63.99875em) {
-    .show-for-large {
-        display: none !important;
-    }
-}
-
-@media print,
-screen and (min-width: 64em) and (max-width: 74.99875em) {
-    .hide-for-large-only {
-        display: none !important;
-    }
-}
-
-@media screen and (max-width: 63.99875em),
-screen and (min-width: 75em) {
-    .show-for-large-only {
-        display: none !important;
-    }
-}

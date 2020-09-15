@@ -13,18 +13,14 @@
     <link rel="canonical" href="/" />
     <link rel="shortcut icon" href="/favicon.png">
     <link rel="icon" sizes="16x16 32x32" href="/favicon.png">
-
     <!-- Preload Prefetch and Preconnect -->
-
     <link rel="preload"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0" as="font"
         crossorigin>
-
     <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com">
     <link rel="preconnect" href="https://use.typekit.net">
     <link rel="preconnect" href="https://ajax.googleapis.com">
     <link rel="preconnect" href=" https://www.google-analytics.com">
-
 
     <script type="text/javascript">
         (function (e, t) { if (typeof define === "function" && define.amd) { define(function () { return t(e) }) } else if (typeof exports === "object") { module.exports = t } else { e.echo = t(e) } })(this, function (e) { "use strict"; var t = {}; var n = function () { }; var r, i, s, o, u; var a = function (e, t) { var n = e.getBoundingClientRect(); return n.right >= t.l && n.bottom >= t.t && n.left <= t.r && n.top <= t.b }; var f = function () { if (!o && !!i) { return } clearTimeout(i); i = setTimeout(function () { t.render(); i = null }, s) }; t.init = function (i) { i = i || {}; var a = i.offset || 0; var l = i.offsetVertical || a; var c = i.offsetHorizontal || a; var h = function (e, t) { return parseInt(e || t, 10) }; r = { t: h(i.offsetTop, l), b: h(i.offsetBottom, l), l: h(i.offsetLeft, c), r: h(i.offsetRight, c) }; s = h(i.throttle, 250); o = i.debounce !== false; u = !!i.unload; n = i.callback || n; t.render(); if (document.addEventListener) { e.addEventListener("scroll", f, false); e.addEventListener("load", f, false) } else { e.attachEvent("onscroll", f); e.attachEvent("onload", f) } }; t.render = function () { var i = document.querySelectorAll("img[data-echo]"); var s = i.length; var o, f; var l = { l: 0 - r.l, t: 0 - r.t, b: (e.innerHeight || document.documentElement.clientHeight) + r.b, r: (e.innerWidth || document.documentElement.clientWidth) + r.r }; for (var c = 0; c < s; c++) { f = i[c]; if (a(f, l)) { if (u) { f.setAttribute("data-echo-placeholder", f.src) } $(f).css("opacity", "0"); f.src = f.getAttribute("data-echo"); $(f).animate({ opacity: "1" }, { speed: 1e3 }); if (!u) { f.removeAttribute("data-echo") } n(f, "load") } else if (u && !!(o = f.getAttribute("data-echo-placeholder"))) { f.src = o; f.removeAttribute("data-echo-placeholder"); n(f, "unload") } } if (!s) { t.detach() } }; t.detach = function () { if (document.removeEventListener) { e.removeEventListener("scroll", f) } else { e.detachEvent("onscroll", f) } clearTimeout(i) }; return t })
@@ -43,7 +39,6 @@
         ga('send', 'pageview');
 
     </script>
-
 </head>
 
 <body>
@@ -184,26 +179,36 @@
 
     <!-- ENHANCED FILTRATION START -->
     <div class="grid-container">
-        <div class="filtration">
-            <div class="grid-x grid-margin-x align-center-middle">
+        <div class="aquabot-features bg-white">
+            <div class="grid-x align-center-middle">
                 <div class="cell large-11 medium-11 small-12">
                     <div class="grid-x align-center-middle">
-                        <div class="cell large-6 medium-12 small-12 text small-order-2 medium-order-1">
-                            <h4>Taking it All in</h4>
-                            <h1><span>Enhanced</span> Filtration</h1>
-                            <p>Best-in-class filters handle more dirt and debris than any other cleaning method. Two
-                                oversized
-                                filter baskets hold an impressive 190 cubic inches and capture fine particles and
-                                contaminants
-                                down to 2 microns in size. So you can get in more cleaning cycles before having to clean
-                                the
-                                filter baskets. The control panel conveniently alerts you when the filters do need
-                                cleaning
-                                and
-                                the top-loading filter baskets are easy to remove and clean in seconds. The X4 combines
-                                best-in-class filter capacity with best-in-class filtration, so your pool doesn’t just
-                                look
-                                cleaner; it’s the cleanest it can be. </p>
+                        <div class="cell large-6 medium-12 small-12 text small-order-2 medium-order-1 margin-2">
+                            <div class="grid-x align-center-middle">
+                                <div class="cell large-9">
+                                    <h4>Taking it All in</h4>
+                                    <h1><span>Enhanced</span> Filtration</h1>
+                                    <p>Best-in-class filters handle more dirt and debris than any other cleaning method.
+                                        Two
+                                        oversized
+                                        filter baskets hold an impressive 190 cubic inches and capture fine particles
+                                        and
+                                        contaminants
+                                        down to 2 microns in size. So you can get in more cleaning cycles before having
+                                        to clean
+                                        the
+                                        filter baskets. The control panel conveniently alerts you when the filters do
+                                        need
+                                        cleaning
+                                        and
+                                        the top-loading filter baskets are easy to remove and clean in seconds. The X4
+                                        combines
+                                        best-in-class filter capacity with best-in-class filtration, so your pool
+                                        doesn’t just
+                                        look
+                                        cleaner; it’s the cleanest it can be. </p>
+                                </div>
+                            </div>
                         </div>
                         <div
                             class="cell large-6 medium-12 small-12 align-self-middle text-center small-order-1 medium-order-2">
@@ -219,21 +224,30 @@
                             class="cell large-6 medium-12 small-12 align-self-bottom text-center small-order-2 medium-order-1">
                             <img src="img/micro-brush-cleaning.jpg" width="996" height="815" alt="micro-brushes">
                         </div>
-                        <div class="cell large-6 medium-12 small-12 text small-order-1 medium-order-2">
-                            <h4>Like a Fine-Tooth Comb</h4>
-                            <h1><span>Performance</span> Cleaning</h1>
-                            <p>Typically, only 1% of pool contaminants are suspended in the water. Our goal is to enable
-                                you to
-                                have the cleanest pool possible. That’s why we built our robotic pool cleaners to scrub
-                                and
-                                clean all of your pool. The durable micro-brushes on Aquabot X4 cleaner scrubs your pool
-                                clean,
-                                from floor to waterline and everywhere in between. The rotating micro-brush agitates the
-                                surface
-                                and loosens up stubborn dirt, debris, algae and bacteria as it moves, including along
-                                the walls
-                                and waterline where contaminants can build up. </p>
-                            <a href="/robotic-pool-cleaner" class="button primary hollow">Learn More</a>
+                        <div class="cell large-6 medium-12 small-12 text small-order-1 medium-order-2 margin-2">
+                            <div class="grid-x align-center-middle">
+                                <div class="cell large-9">
+                                    <h4>Like a Fine-Tooth Comb</h4>
+                                    <h1><span>Performance</span> Cleaning</h1>
+                                    <p>Typically, only 1% of pool contaminants are suspended in the water. Our goal is
+                                        to enable
+                                        you to
+                                        have the cleanest pool possible. That’s why we built our robotic pool cleaners
+                                        to scrub
+                                        and
+                                        clean all of your pool. The durable micro-brushes on Aquabot X4 cleaner scrubs
+                                        your pool
+                                        clean,
+                                        from floor to waterline and everywhere in between. The rotating micro-brush
+                                        agitates the
+                                        surface
+                                        and loosens up stubborn dirt, debris, algae and bacteria as it moves, including
+                                        along
+                                        the walls
+                                        and waterline where contaminants can build up. </p>
+                                    <a href="/robotic-pool-cleaner" class="button primary hollow">Learn More</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -293,8 +307,7 @@
                                         to wall
                                         transitions, with minimal slipping on all surfaces.</p>
 
-                                    <a href="/robotic-pool-cleaner#four-wheel-drive"
-                                        class="button primary hollow">Learn
+                                    <a href="/robotic-pool-cleaner#four-wheel-drive" class="button primary hollow">Learn
                                         More</a>
                                 </div>
                             </div>

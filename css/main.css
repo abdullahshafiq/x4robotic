@@ -107,10 +107,7 @@ z-index:999999;/* makes sure it stays on top */
 #banner-bottom .left50,#banner-bottom .right50{display:block;height:90px;float:left;z-index:1;}
 .star-rating {margin:0 0 1.5em;width: 100%; float: left;}
 
-#sub-banner-text h3{font-size:95px;}
-#btn-sub-banner{color:#007BC2;border:4px solid #007BC2;padding:16px 28px;text-decoration:none;font-weight:700;margin-top:10px;border-radius:5px;font-size:24px;display:inline-block;}
-#sub-banner-text h1 em{font-style:normal;font-size:14px;vertical-align:text-top;}
-#sub-banner{height:auto;background:url(../img/healthier-clean-background.jpg) center center no-repeat;background-size:1700px;}
+
 #compare-page #sub-banner{background:url(../img/compare-banner.jpg) left bottom no-repeat;background-size:cover;}
 #products-page #sub-banner{height:100%;background:url(../img/features-background.jpg) top center no-repeat #fff;padding:13em 0;background-position-y:-20px;}
 #compare-page #sub-banner-text{padding:175px 0 95px;margin:0;text-align:left;}
@@ -122,7 +119,7 @@ z-index:999999;/* makes sure it stays on top */
 #standard-page #sub-banner-text{padding:150px 0 50px;}
 #standard-page #sub-banner-text h1{font-size:55px;}
 #standard-page #sub-banner-text p{margin-bottom:0;padding-bottom:0;}
-#sub-banner-text p{font-size:22px;}
+
 
 
 .dark .title{color:#35A7E3;}
@@ -155,21 +152,21 @@ z-index:999999;/* makes sure it stays on top */
 .model-preview h2{font-size:24px;}
 #x4-model-preview-img{position:absolute;left:78%;bottom:0;height:93%;width:auto;}
 #more-features{background:#080808;background:radial-gradient(ellipse at center,#fff 0%,#dbecff 100%);padding:0!important;}
-#title-banner,#title-banner2,#specifications,#title-banner4{padding:0;z-index:9999;position:relative;transition:all .5s;top:0;}
+
 .stuck{position:fixed!important;top:100px!important;width:100%;}
 .stuck-header{position:fixed!important;max-width:105rem;top:0;z-index:999999;}
-.sticky-wrapper{transition:all .74s;}
-#title-banner2{z-index:10000;}
+
+
 #specifications{z-index:10001;}
-#title-banner4{z-index:10002;}
+
 
 #overview-three{padding:50px 0;}
 #overview-three .full30 .full30{width:28%;}
 
 
-#title-banner2 h4{background:#5aabe1;}
-#specifications h4{background:#1e3e5f;}
-#title-banner4 h4{background:#28a3f5;}
+
+
+
 
 
 
@@ -179,7 +176,7 @@ z-index:999999;/* makes sure it stays on top */
 #overview-three .full100 h2{text-transform:uppercase;font-size:38px;margin:0 0 60px;color:#464646;}
 #overview-three .full100 h2 span{color:#007BC2;}
 #overview-three .full30 .image{margin-top:-2.5%;}
-#more-features .down-arrow,#title-banner .down-arrow,#title-banner2 .down-arrow,#specifications .down-arrow,#title-banner4 .down-arrow{top:55px;}
+
 
 .table-wrapper table tr td.product-column{font-weight:300;font-family:"museo-sans",Helvetica,Arial,sans-serif;color:#666;}
 
@@ -205,13 +202,7 @@ z-index:999999;/* makes sure it stays on top */
 #efficiency-img{bottom:0;height:100%;width:auto;left:50%;}
 #efficiency{padding-top:50px;}
 #specs{position:relative;padding:0;}
-#specs-table td .fa{color:#fff!important;}
-#specs-table{background:#007bc2;padding:5rem;}
-#specs-table table{width:93%;}
-#specs-table table tr td{border-bottom:1px solid #DDD;color:#fff;padding:15px 0;}
-#specs-table table tr:last-of-type td{border-bottom:none;}
-#specs-table table tr td.left{border-right:1px solid #DDD;font-weight:700;width:36%;font-family:"museo-sans-condensed",Helvetica,Arial,sans-serif;font-size:19px;letter-spacing:.04em;}
-#specs-table table tr td.right{font-family:"museo-sans",Helvetica,Arial,sans-serif;padding:15px 20px;font-size:18px;}
+
 #warranty{padding-top:50px;}
 #robotic-pool-caddy-img{bottom:0;right:50%;height:909px;width:auto;}
 #warranty3splash{bottom:0;height:100%;width:auto;left:45%;}
