@@ -3543,7 +3543,7 @@ h2 em {
 
 .specs-table {
     background: #007bc2;
-    padding: 1em;
+    padding: 2em 1em;
 }
 
 .specs-table table {
@@ -3879,7 +3879,7 @@ footer ul li a {
 
     .stuck {
         width: 100%;
-        top: 70px;
+        top: 70px !important;
     }
 
     .object-fit {
@@ -3888,6 +3888,13 @@ footer ul li a {
 
     .object-fit.cover {
         object-fit: contain;
+    }
+    .specs-table {
+        padding: 1em;
+    }
+    .specs-table table tr td {
+        padding: .5em;
+        font-size: .9em;
     }
 }
 
