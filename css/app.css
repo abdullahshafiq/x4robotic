@@ -665,7 +665,7 @@ nav a:hover{color:#000}
 .nav-toggle-label{display:none}
 nav{position:relative;text-align:left;transition:none;transform:scale(1,1);background:0 0;top:initial;left:initial;grid-column:2/3;display:flex;justify-content:flex-end;align-items:center}
 nav ul{display:flex;margin:0}
-nav li{margin-left:1em;margin-bottom:0;padding-bottom:0}
+nav li{margin-left:1em;margin-right:1em;margin-bottom:0;padding-bottom:0}
 nav a{opacity:1;position:relative}
 }
 /*! Buttons */
@@ -699,8 +699,9 @@ h2 em{font-size:.5em;font-style:normal;vertical-align:super}
 .banner-badge h4{color:#8a8a8a;font-size:14px;text-transform:capitalize}
 .banner .right{top:120px}
 .banner-text{width:100%;margin-top:-10%}
+.banner-text h1{color:#505050;font-size:1.5em;font-weight:300;text-transform:capitalize}
+.banner-text h1 span{font-size:.5em;color:#505050;vertical-align:top}
 .banner-text h3{color:#35a7e3;font-size:6em;font-weight:600}
-.banner-text h1{color:#505050;font-size:1em;font-weight:300}
 .banner-text h3 span{color:#007bc2}
 .robot-banner{text-align:center;padding-bottom:35px;margin:120px 0 0}
 .aquabot-shadow{width:90%;height:auto;position:absolute;bottom:0;left:5%}
@@ -804,6 +805,7 @@ table{border-collapse:collapse;border-spacing:0}
 .products-page .sub-banner h1{font-size:5em}
 .products-page .sub-banner .button{margin:0;padding:1em 1.5em}
 /*! FOOTER HOOK */
+.footer-hook{background:url(../img/light-water.jpg) top center no-repeat #dbedff}
 .financing{padding:1em;border-radius:6px;background:#fff}
 /*! FOOTER */
 footer{background:#1e3e5f;padding:5em 1em}
