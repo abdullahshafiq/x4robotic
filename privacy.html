@@ -2,214 +2,358 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Privacy Policy | Aquabots X4</title>
-  <meta name="description" content="" />
+  <meta name="description"
+    content="Visit the official Aquabot X4 robotic pool cleaner site to browse Aquabot's revolutionary new features and learn how to use fewer chemicals in your pool." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/app.css">
   <!-- Canonical Link -->
   <link rel="canonical" href="/" />
   <link rel="shortcut icon" href="/favicon.png">
   <link rel="icon" sizes="16x16 32x32" href="/favicon.png">
-
   <!-- Preload Prefetch and Preconnect -->
+  <link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0"
+    as="font" crossorigin>
+  <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com">
+  <link rel="preconnect" href="https://use.typekit.net">
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
 
-  <link rel="preload"
-      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0" as="font"
-      crossorigin>
-
-  <link rel="preconnect" href="//maxcdn.bootstrapcdn.com">
-  <link rel="preconnect" href="//use.typekit.net">
-  <link rel="preconnect" href="//ajax.googleapis.com">
-  <link rel="preconnect" href="//www.google-analytics.com">
-
-  <!--[if IE]>
-          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif]-->
-  <script>
-      (function (e, t) { if (typeof define === "function" && define.amd) { define(function () { return t(e) }) } else if (typeof exports === "object") { module.exports = t } else { e.echo = t(e) } })(this, function (e) { "use strict"; var t = {}; var n = function () { }; var r, i, s, o, u; var a = function (e, t) { var n = e.getBoundingClientRect(); return n.right >= t.l && n.bottom >= t.t && n.left <= t.r && n.top <= t.b }; var f = function () { if (!o && !!i) { return } clearTimeout(i); i = setTimeout(function () { t.render(); i = null }, s) }; t.init = function (i) { i = i || {}; var a = i.offset || 0; var l = i.offsetVertical || a; var c = i.offsetHorizontal || a; var h = function (e, t) { return parseInt(e || t, 10) }; r = { t: h(i.offsetTop, l), b: h(i.offsetBottom, l), l: h(i.offsetLeft, c), r: h(i.offsetRight, c) }; s = h(i.throttle, 250); o = i.debounce !== false; u = !!i.unload; n = i.callback || n; t.render(); if (document.addEventListener) { e.addEventListener("scroll", f, false); e.addEventListener("load", f, false) } else { e.attachEvent("onscroll", f); e.attachEvent("onload", f) } }; t.render = function () { var i = document.querySelectorAll("img[data-echo]"); var s = i.length; var o, f; var l = { l: 0 - r.l, t: 0 - r.t, b: (e.innerHeight || document.documentElement.clientHeight) + r.b, r: (e.innerWidth || document.documentElement.clientWidth) + r.r }; for (var c = 0; c < s; c++) { f = i[c]; if (a(f, l)) { if (u) { f.setAttribute("data-echo-placeholder", f.src) } $(f).css("opacity", "0"); f.src = f.getAttribute("data-echo"); $(f).animate({ opacity: "1" }, { speed: 1e3 }); if (!u) { f.removeAttribute("data-echo") } n(f, "load") } else if (u && !!(o = f.getAttribute("data-echo-placeholder"))) { f.src = o; f.removeAttribute("data-echo-placeholder"); n(f, "unload") } } if (!s) { t.detach() } }; t.detach = function () { if (document.removeEventListener) { e.removeEventListener("scroll", f) } else { e.detachEvent("onscroll", f) } clearTimeout(i) }; return t })
+  <script type="text/javascript">
+    (function (e, t) {
+      if (typeof define === "function" && define.amd) {
+        define(function () {
+          return t(e)
+        })
+      } else if (typeof exports === "object") {
+        module.exports = t
+      } else {
+        e.echo = t(e)
+      }
+    })(this, function (e) {
+      "use strict";
+      var t = {};
+      var n = function () {};
+      var r, i, s, o, u;
+      var a = function (e, t) {
+        var n = e.getBoundingClientRect();
+        return n.right >= t.l && n.bottom >= t.t && n.left <= t.r && n.top <= t.b
+      };
+      var f = function () {
+        if (!o && !!i) {
+          return
+        }
+        clearTimeout(i);
+        i = setTimeout(function () {
+          t.render();
+          i = null
+        }, s)
+      };
+      t.init = function (i) {
+        i = i || {};
+        var a = i.offset || 0;
+        var l = i.offsetVertical || a;
+        var c = i.offsetHorizontal || a;
+        var h = function (e, t) {
+          return parseInt(e || t, 10)
+        };
+        r = {
+          t: h(i.offsetTop, l),
+          b: h(i.offsetBottom, l),
+          l: h(i.offsetLeft, c),
+          r: h(i.offsetRight, c)
+        };
+        s = h(i.throttle, 250);
+        o = i.debounce !== false;
+        u = !!i.unload;
+        n = i.callback || n;
+        t.render();
+        if (document.addEventListener) {
+          e.addEventListener("scroll", f, false);
+          e.addEventListener("load", f, false)
+        } else {
+          e.attachEvent("onscroll", f);
+          e.attachEvent("onload", f)
+        }
+      };
+      t.render = function () {
+        var i = document.querySelectorAll("img[data-echo]");
+        var s = i.length;
+        var o, f;
+        var l = {
+          l: 0 - r.l,
+          t: 0 - r.t,
+          b: (e.innerHeight || document.documentElement.clientHeight) + r.b,
+          r: (e.innerWidth || document.documentElement.clientWidth) + r.r
+        };
+        for (var c = 0; c < s; c++) {
+          f = i[c];
+          if (a(f, l)) {
+            if (u) {
+              f.setAttribute("data-echo-placeholder", f.src)
+            }
+            $(f).css("opacity", "0");
+            f.src = f.getAttribute("data-echo");
+            $(f).animate({
+              opacity: "1"
+            }, {
+              speed: 1e3
+            });
+            if (!u) {
+              f.removeAttribute("data-echo")
+            }
+            n(f, "load")
+          } else if (u && !!(o = f.getAttribute("data-echo-placeholder"))) {
+            f.src = o;
+            f.removeAttribute("data-echo-placeholder");
+            n(f, "unload")
+          }
+        }
+        if (!s) {
+          t.detach()
+        }
+      };
+      t.detach = function () {
+        if (document.removeEventListener) {
+          e.removeEventListener("scroll", f)
+        } else {
+          e.detachEvent("onscroll", f)
+        }
+        clearTimeout(i)
+      };
+      return t
+    })
   </script>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
   <script>
-          (function (i, s, o, g, r, a, m) {
-              i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                  (i[r].q = i[r].q || []).push(arguments)
-              }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-          })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-62877944-1', 'auto');
-      ga('send', 'pageview');
-
+    ga('create', 'UA-62877944-1', 'auto');
+    ga('send', 'pageview');
   </script>
 </head>
 
 <body id="standard-page">
-    <!-- #BeginLibraryItem "/Library/header.lbi" -->
-    <div class="grid-container">
-      <header class="stuck-header">
-          <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-          <div id="site-logo"><a href="/"><img src="img/aquabot-logo.png" alt="ecopool logo"></a>
-          </div>
-          <input type="checkbox" id="nav-toggle" class="nav-toggle">
-          <nav>
-              <ul>
-                  <li id="productsNav"><a href="/x4robotic/robotic-pool-cleaner.html">Products</a></li>
-                  <li id="compareNav"><a href="/x4robotic/compare.html">Compare</a></li>
-                  <li><a href="/x4robotic/robotic-pool-cleaner#specifications.html">Specs</a></li>
-                  <li id="warrantyNav"><a href="/x4robotic/warranty.html">Warranty</a></li>
-              </ul>
-          </nav>
-          <div id="main-menu-right" class="menu align-right">
-              <a href="/x4robotic/find-a-dealer" class="show-for-medium button btn-gold medium">Shop Now</a>
-          </div>
-      </header>
-  </div>
-  <!-- #EndLibraryItem -->
+  <!-- HEADER START -->
   <div class="grid-container">
-    <div id="sub-banner" class="relative">
-      <div class="grid-x grid-margin-x align-center-middle wrapper">
-        <div id="sub-banner-text" class="cell large-6 medium-10 small-12 animated fadeInDown z-front relative center-all">
-          <h1>Privacy <span>Policy</span></h1>
-          <p>Please carefully review this privacy policy before using this site. Any use of this website creates a
-            biding agreement to comply with these terms and conditions. If you do not agree to these terms, please exit
-            this site immediately. </p>
+    <header class="stuck-header">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <div id="site-logo"><a href="/"><img src="img/aquabot-logo.png" alt="Aquabot logo"></a>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav>
+        <ul>
+          <li><a href="/x4robotic/robotic-pool-cleaner.html">Products</a></li>
+          <li><a href="/x4robotic/compare.html">Compare</a></li>
+          <li><a href="robotic-pool-cleaner.html#specifications.html">Specs</a></li>
+          <li><a href="/x4robotic/warranty.html">Warranty</a></li>
+        </ul>
+      </nav>
+      <div id="main-menu-right" class="menu align-right">
+        <a href="/x4robotic/find-a-dealer" class="show-for-medium button primary golden">Shop Now</a>
+      </div>
+    </header>
+  </div>
+  <!-- HEADER END -->
+  <!-- SUB BANNER START -->
+  <div class="grid-container">
+    <div class="sub-banner small">
+      <div class="grid-x grid-margin-x align-center-middle text-center">
+        <div class="cell large-6 medium-11 small-12 animated fadeInDown">
+          <div class="grid-x">
+            <div class="cell large-12">
+              <h1>Privacy <span>Policy</span></h1>
+              <p>Please carefully review this privacy policy before using this site. Any use of this website creates a
+                biding agreement to comply with these terms and conditions. If you do not agree to these terms, please
+                exit
+                this site immediately.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- SUB BANNER ENDS -->
+  <!-- CONTENT START -->
   <div class="grid-container">
-    <section id="main-section" class="bg-white">
-      <div class="grid-x grid-margin-x wrapper clearfix">
-        <div class="cell large-12">
-          <p>
-            This Web site is the responsibility of x4robotic.com. If you have questions regarding the Agreement or the
-            practices of x4robotic.com, please contact us by e-mail or regular mail.</p>
+    <section class="bg-white">
+      <div class="grid-x grid-margin-x align-center-middle">
+        <div class="cell large-12 medium-12 small-12">
+          <div class="grid-x align-center">
+            <div class="cell large-8 medium-11 small-12">
+              <p>
+                This Web site is the responsibility of x4robotic.com. If you have questions regarding the Agreement or
+                the
+                practices of x4robotic.com, please contact us by e-mail or regular mail.</p>
 
-          <h2>The x4robotic.com Commitment to Privacy</h2>
-          <p>Your privacy is important to us. To better protect your privacy x4robotic.com provide this notice
-            explaining our online information practices and the choices you can make about the way your information is
-            collected and used. To make this notice easy to find, x4robotic.com has made it available on our homepage
-            and at every point where personally identifiable information may be requested. The Information x4robotic.com
-            Collects: This notice applies to all information collected or submitted at www.x4robotic.com On some pages,
-            you can order products, make requests, and register to receive materials. The types of personal information
-            collected at these pages are:<br />
-            <b>Name <br />
-              Address<br />
-              Email address<br />
-              Phone number<br />
-              Credit/Debit Card Information<br /></b><br>
+              <h2>The x4robotic.com Commitment to Privacy</h2>
+              <p>Your privacy is important to us. To better protect your privacy x4robotic.com provide this notice
+                explaining our online information practices and the choices you can make about the way your information
+                is
+                collected and used. To make this notice easy to find, x4robotic.com has made it available on our
+                homepage
+                and at every point where personally identifiable information may be requested. The Information
+                x4robotic.com
+                Collects: This notice applies to all information collected or submitted at www.x4robotic.com On some
+                pages,
+                you can order products, make requests, and register to receive materials. The types of personal
+                information
+                collected at these pages are:<br />
+                <b>Name <br />
+                  Address<br />
+                  Email address<br />
+                  Phone number<br />
+                  Credit/Debit Card Information<br /></b><br>
 
-            On some pages, you can submit information about other people. For example, if you order a gift online and
-            want it sent directly to the recipient, you will need to submit the recipient's address. In this
-            circumstance, the types of personal information collected are:<br />
-            <b>Name<br />
-              Address<br />
-              Phone Number</b>
+                On some pages, you can submit information about other people. For example, if you order a gift online
+                and
+                want it sent directly to the recipient, you will need to submit the recipient's address. In this
+                circumstance, the types of personal information collected are:<br />
+                <b>Name<br />
+                  Address<br />
+                  Phone Number</b>
 
-          </p>
+              </p>
 
-          <h2>The Way x4robotic.com Uses Information:</h2>
-          <p>x4robotic.com uses the information you provide about yourself when placing an order only to complete that
-            order. x4robotic.com does not share this information with outside parties except to the extent necessary to
-            complete that order. x4robotic.com uses the information you provide about someone else when placing an order
-            only to ship the product and to confirm delivery. x4robotic.com does not share this information with outside
-            parties except to the extent necessary to complete that order. x4robotic.com uses return email addresses to
-            answer email that we receive. Such addresses are not shared with outside parties.<br /><br />
-            x4robotic.com uses non-identifying and aggregate information to better design our x4robotic.comUV.com site
-            and to share with advertisers. For example, x4robotic.com may tell an advertiser that X number of
-            individuals visited a certain area on our x4robotic.combsite, or that Y number of men and Z number of women
-            filled out our registration form, but x4robotic.com would not disclose anything that could be used to
-            identify those individuals. Finally, x4robotic.com never uses or share the personally identifiable
-            information provided to us online in ways unrelated to the ones described above without also providing you
-            an opportunity to opt-out or otherwise prohibit such unrelated uses.
-          </p>
+              <h2>The Way x4robotic.com Uses Information:</h2>
+              <p>x4robotic.com uses the information you provide about yourself when placing an order only to complete
+                that
+                order. x4robotic.com does not share this information with outside parties except to the extent necessary
+                to
+                complete that order. x4robotic.com uses the information you provide about someone else when placing an
+                order
+                only to ship the product and to confirm delivery. x4robotic.com does not share this information with
+                outside
+                parties except to the extent necessary to complete that order. x4robotic.com uses return email addresses
+                to
+                answer email that we receive. Such addresses are not shared with outside parties.<br /><br />
+                x4robotic.com uses non-identifying and aggregate information to better design our x4robotic.comUV.com
+                site
+                and to share with advertisers. For example, x4robotic.com may tell an advertiser that X number of
+                individuals visited a certain area on our x4robotic.combsite, or that Y number of men and Z number of
+                women
+                filled out our registration form, but x4robotic.com would not disclose anything that could be used to
+                identify those individuals. Finally, x4robotic.com never uses or share the personally identifiable
+                information provided to us online in ways unrelated to the ones described above without also providing
+                you
+                an opportunity to opt-out or otherwise prohibit such unrelated uses.
+              </p>
 
-          <h2>Our Commitment To Data Security</h2>
-          <p>To prevent unauthorized access, maintain data accuracy, and ensure the correct use of information,
-            x4robotic.com has put in place appropriate physical, electronic, and managerial procedures to safeguard and
-            secure the information x4robotic.com collects online.</p>
+              <h2>Our Commitment To Data Security</h2>
+              <p>To prevent unauthorized access, maintain data accuracy, and ensure the correct use of information,
+                x4robotic.com has put in place appropriate physical, electronic, and managerial procedures to safeguard
+                and
+                secure the information x4robotic.com collects online.</p>
 
-          <h2>Our Commitment to Children's Privacy:</h2>
-          <p>Protecting the privacy of the very young is especially important. For that reason, x4robotic.com never
-            collects or maintain information at x4robotic.com from those we actually know are under 13, and no part of
-            our x4robotic.com is structured to attract anyone under 13.</p>
+              <h2>Our Commitment to Children's Privacy:</h2>
+              <p>Protecting the privacy of the very young is especially important. For that reason, x4robotic.com never
+                collects or maintain information at x4robotic.com from those we actually know are under 13, and no part
+                of
+                our x4robotic.com is structured to attract anyone under 13.</p>
 
-          <h2>How You Can Access or Correct Your Information</h2>
-          <p>You can access all your personally identifiable information that x4robotic.com collects online and maintain
-            by calling us and verifying your identitiy. x4robotic.comUV.com uses this procedure to better safeguard your
-            information. You can correct factual errors in your personally identifiable information by sending us a
-            request that credibly shows error. To protect your privacy and security, x4robotic.com will also take
-            reasonable steps to verify your identity before granting access or making corrections.</p>
+              <h2>How You Can Access or Correct Your Information</h2>
+              <p>You can access all your personally identifiable information that x4robotic.com collects online and
+                maintain
+                by calling us and verifying your identitiy. x4robotic.comUV.com uses this procedure to better safeguard
+                your
+                information. You can correct factual errors in your personally identifiable information by sending us a
+                request that credibly shows error. To protect your privacy and security, x4robotic.com will also take
+                reasonable steps to verify your identity before granting access or making corrections.</p>
 
-          <h2>x4robotic.com's Right to Contact User.</h2>
-          <p>x4robotic.com reserves the right to contact site visitors regarding account status and changes to the
-            subscriber agreement, privacy policy, or any other policies or agreements relevant to site visitors.</p>
+              <h2>x4robotic.com's Right to Contact User.</h2>
+              <p>x4robotic.com reserves the right to contact site visitors regarding account status and changes to the
+                subscriber agreement, privacy policy, or any other policies or agreements relevant to site visitors.</p>
 
-          <h2>x4robotic.com's Right to Change Privacy Policy.</h2>
-          <p>x4robotic.com reserves the right to change this policy at any time by notifying visitors of the existence
-            and location of the new or revised privacy policy.</p>
+              <h2>x4robotic.com's Right to Change Privacy Policy.</h2>
+              <p>x4robotic.com reserves the right to change this policy at any time by notifying visitors of the
+                existence
+                and location of the new or revised privacy policy.</p>
 
-          <h2>How To Contact x4robotic.com</h2>
-          <p>Should you have other questions or concerns about these privacy policies, please send us an email at
-            <script>
-              var username = "info";
-              var hostname = "x4robotic.com";
-              var linktext = username + "@" + hostname;
-              document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
-            </script>
-          </p>
-
+              <h2>How To Contact x4robotic.com</h2>
+              <p>Should you have other questions or concerns about these privacy policies, please send us an email at
+                <script>
+                  var username = "info";
+                  var hostname = "x4robotic.com";
+                  var linktext = username + "@" + hostname;
+                  document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
+                </script>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </section><!-- #BeginLibraryItem "/Library/footer.lbi" -->
+    </section>
   </div>
-      <!-- FOOTER -->
-      <div class="grid-container">
-        <footer>
-            <div class="grid-x clearfix relative wrapper">
+  <!-- CONTENT ENDS -->
+    <!-- FOOTER START -->
+    <div class="grid-container">
+      <footer>
+          <div class="grid-x align-center">
+              <div class="cell align-center large-6 medium-5 small-12">
+                  <div class="grid-x align-center-middle">
+                      <div class="cell align-center large-6 medium-10 small-12">
+                          <img src="img/aquabot-logo-white.png" width="200" height="54">
+                          <p>Copyright <span>
+                                  <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                              </span> &copy; Aquabots - All Rights Reserved<br>
+                              <a href="privacy">Privacy Policy</a>&nbsp; | &nbsp;<a href="terms">Terms &amp;
+                                  Conditions</a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="cell large-6 medium-7 small-12">
+                  <div class="grid-x align-center">
+                      <ul class="cell large-6 medium-6 small-12">
+                          <li>Aquabots</li>
+                          <li><a href="/">Home</a></li>
+                          <li><a href="/robotic-pool-cleaner">Robotic Pool Cleaners</a></li>
+                          <li><a href="/robotic-pool-cleaner#specifications">Specifications</a></li>
+                          <li><a href="/compare">Compare</a></li>
+                          <li><a href="/warranty">Warranty</a></li>
+                      </ul>
+                      <ul class="cell large-6 medium-6 small-12">
+                          <li>Sales &amp; Support</li>
+                          <li><a href="/find-a-dealer">Shop Now</a></li>
+                          <li><a href="/media/aquabot-x4.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>
+                                  Download
+                                  Brochure</a></li>
+                          <li><a href="/warranty#register">Register Your Warranty</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </div>
+  <!-- FOOTER ENDS -->
 
-                <div id="footer-left" class="cell align-center large-6 medium-6 small-12">
-                    <a href="#">
-                        <div id="footer-logo"></div>
-                    </a>
-                    <p>Copyright <span id="copyright">
-                            <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-                        </span> &copy; Aquabots - All Rights Reserved<br>
-                        <a href="privacy">Privacy Policy</a>&nbsp; | &nbsp;<a href="terms">Terms &amp; Conditions</a>
-                    </p>
-                </div>
-                <div id="footer-nav-wrapper" class="cell large-6 medium-6 small-12 clearfix">
-                    <ul>
-                        <li>Aquabots</li>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/robotic-pool-cleaner">Robotic Pool Cleaners</a></li>
-                        <li><a href="/robotic-pool-cleaner#specifications">Specifications</a></li>
-                        <li><a href="/compare">Compare</a></li>
-                        <li><a href="/warranty">Warranty</a></li>
-                    </ul>
-                    <ul>
-                        <li>Sales &amp; Support</li>
-                        <li><a href="/find-a-dealer">Shop Now</a></li>
-                        <li><a href="/media/aquabot-x4.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> Download
-                                Brochure</a></li>
-                        <li><a href="/warranty#register">Register Your Warranty</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer><!-- #EndLibraryItem -->
-        </div>
-
-  <script src="//use.typekit.net/fzb6psq.js"></script>
-  <script>try { Typekit.load(); } catch (e) { }</script>
+  <script src="https://use.typekit.net/fzb6psq.js"></script>
+  <script>
+    try {
+      Typekit.load();
+    } catch (e) {}
+  </script>
 
   <script>
     // MyBox Script
     var x = document.getElementsByClassName('myBox');
     for (var i = 0; i < x.length; i++) {
-      x[i].onclick = function () { window.location = this.getElementsByTagName('a')[0].getAttributeNode("href").value; }
+      x[i].onclick = function () {
+        window.location = this.getElementsByTagName('a')[0].getAttributeNode("href").value;
+      }
     };
 
     // Lazy Load
@@ -221,8 +365,7 @@
         console.log(element, 'has been', op + 'ed')
       }
     });
-// echo.render(); is also available for non-scroll callbacks
-
+    // echo.render(); is also available for non-scroll callbacks
   </script>
 
   <script>
@@ -232,7 +375,10 @@
         if ($.browser.msie) {
           return this.each(function () {
             if (this.scrollWidth > this.offsetWidth) {
-              $(this).css({ 'padding-bottom': '20px', 'overflow-y': 'hidden' });
+              $(this).css({
+                'padding-bottom': '20px',
+                'overflow-y': 'hidden'
+              });
             }
           });
         } else {
@@ -270,24 +416,23 @@
     var sticky4 = new Waypoint.Sticky({
       element: $('#title-banner4')[0]
     })
-  /*
+    /*
+        $(window).load(function(){
+          $("#title-banner").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
+        });
+    
       $(window).load(function(){
-        $("#title-banner").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
-      });
-  
-    $(window).load(function(){
-        $$("#title-banner2").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
-      });
-  
-    $(window).load(function(){
-        $("#title-banner3").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
-      });
-  
-    $(window).load(function(){
-        $("#title-banner4").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
-      });
-  */
-
+          $$("#title-banner2").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
+        });
+    
+      $(window).load(function(){
+          $("#title-banner3").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
+        });
+    
+      $(window).load(function(){
+          $("#title-banner4").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
+        });
+    */
   </script>
 
 </body>
