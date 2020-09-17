@@ -833,7 +833,7 @@ section{padding:2rem 0}
 .stuck.iso{width:100%;top:70px!important;z-index:9999}
 .object-fit{height:auto}
 .object-fit.cover{object-fit:contain}
-.specs-table{padding:1em}
+.specs-table{padding:0}
 .specs-table table tr td{padding:.5em;font-size:.9em!important}
 .compare-page .sub-banner{background-size:cover}
 #quotes-rotator h3{font-size:1.2em}
