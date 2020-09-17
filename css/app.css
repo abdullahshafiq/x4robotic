@@ -693,7 +693,7 @@ h2 em{font-size:.5em;font-style:normal;vertical-align:super}
 .banner-text h3 span{color:#007bc2}
 .robot-banner{text-align:center;padding-bottom:35px;margin:120px 0 0}
 .aquabot-shadow{width:90%;height:auto;position:absolute;bottom:0;left:5%}
-.banner-bottom{width:100%;bottom:-1px;z-index:0}
+.banner-bottom{width:100%;bottom:-1px;z-index:0;left:0;bottom:-10px;}
 .banner-bottom .grid-x .cell{height:90px}
 /*! HOME - Fold */
 .home-fold img{width:80px;height:auto;padding-bottom:20px}
