@@ -694,7 +694,7 @@ h2 em{font-size:.5em;font-style:normal;vertical-align:super}
 .robot-banner{text-align:center;padding-bottom:35px;margin:120px 0 0}
 .aquabot-shadow{width:90%;height:auto;position:absolute;bottom:0;left:5%}
 .banner-bottom{width:100%;bottom:-1px;z-index:0;left:0;bottom:-10px;}
-.banner-bottom .grid-x .cell{height:90px}
+.banner-bottom .grid-x .cell{height:100px}
 /*! HOME - Fold */
 .home-fold img{width:80px;height:auto;padding-bottom:20px}
 .home-fold h1{font-size:2.5em}
@@ -865,8 +865,4 @@ header{padding:.2rem 1rem;grid-template-columns:1fr auto 1fr}
 @media screen and (min-width:64em) {
 .overview{text-align:left;padding-top:0}
 .compare-page .sub-banner{background-size:cover}
-}
-/*! CSS HACKS AND FIXES */
-@supports (display: grid) {
-header{display:grid;grid-template-columns:1fr auto .3fr;}
 }
