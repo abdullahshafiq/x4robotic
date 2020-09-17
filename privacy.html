@@ -13,137 +13,6 @@
   <link rel="canonical" href="/" />
   <link rel="shortcut icon" href="/favicon.png">
   <link rel="icon" sizes="16x16 32x32" href="/favicon.png">
-  <!-- Preload Prefetch and Preconnect -->
-  <link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0"
-    as="font" crossorigin>
-  <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com">
-  <link rel="preconnect" href="https://use.typekit.net">
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://www.google-analytics.com">
-
-  <script type="text/javascript">
-    (function (e, t) {
-      if (typeof define === "function" && define.amd) {
-        define(function () {
-          return t(e)
-        })
-      } else if (typeof exports === "object") {
-        module.exports = t
-      } else {
-        e.echo = t(e)
-      }
-    })(this, function (e) {
-      "use strict";
-      var t = {};
-      var n = function () {};
-      var r, i, s, o, u;
-      var a = function (e, t) {
-        var n = e.getBoundingClientRect();
-        return n.right >= t.l && n.bottom >= t.t && n.left <= t.r && n.top <= t.b
-      };
-      var f = function () {
-        if (!o && !!i) {
-          return
-        }
-        clearTimeout(i);
-        i = setTimeout(function () {
-          t.render();
-          i = null
-        }, s)
-      };
-      t.init = function (i) {
-        i = i || {};
-        var a = i.offset || 0;
-        var l = i.offsetVertical || a;
-        var c = i.offsetHorizontal || a;
-        var h = function (e, t) {
-          return parseInt(e || t, 10)
-        };
-        r = {
-          t: h(i.offsetTop, l),
-          b: h(i.offsetBottom, l),
-          l: h(i.offsetLeft, c),
-          r: h(i.offsetRight, c)
-        };
-        s = h(i.throttle, 250);
-        o = i.debounce !== false;
-        u = !!i.unload;
-        n = i.callback || n;
-        t.render();
-        if (document.addEventListener) {
-          e.addEventListener("scroll", f, false);
-          e.addEventListener("load", f, false)
-        } else {
-          e.attachEvent("onscroll", f);
-          e.attachEvent("onload", f)
-        }
-      };
-      t.render = function () {
-        var i = document.querySelectorAll("img[data-echo]");
-        var s = i.length;
-        var o, f;
-        var l = {
-          l: 0 - r.l,
-          t: 0 - r.t,
-          b: (e.innerHeight || document.documentElement.clientHeight) + r.b,
-          r: (e.innerWidth || document.documentElement.clientWidth) + r.r
-        };
-        for (var c = 0; c < s; c++) {
-          f = i[c];
-          if (a(f, l)) {
-            if (u) {
-              f.setAttribute("data-echo-placeholder", f.src)
-            }
-            $(f).css("opacity", "0");
-            f.src = f.getAttribute("data-echo");
-            $(f).animate({
-              opacity: "1"
-            }, {
-              speed: 1e3
-            });
-            if (!u) {
-              f.removeAttribute("data-echo")
-            }
-            n(f, "load")
-          } else if (u && !!(o = f.getAttribute("data-echo-placeholder"))) {
-            f.src = o;
-            f.removeAttribute("data-echo-placeholder");
-            n(f, "unload")
-          }
-        }
-        if (!s) {
-          t.detach()
-        }
-      };
-      t.detach = function () {
-        if (document.removeEventListener) {
-          e.removeEventListener("scroll", f)
-        } else {
-          e.detachEvent("onscroll", f)
-        }
-        clearTimeout(i)
-      };
-      return t
-    })
-  </script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-62877944-1', 'auto');
-    ga('send', 'pageview');
-  </script>
 </head>
 
 <body id="standard-page">
@@ -156,14 +25,14 @@
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <nav>
         <ul>
-          <li><a href="/x4robotic/robotic-pool-cleaner.html">Products</a></li>
-          <li><a href="/x4robotic/compare.html">Compare</a></li>
-          <li><a href="robotic-pool-cleaner.html#specifications.html">Specs</a></li>
-          <li><a href="/x4robotic/warranty.html">Warranty</a></li>
+          <li><a class="active" href="robotic-pool-cleaner.html">Products</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="robotic-pool-cleaner.html#specifications">Specs</a></li>
+          <li><a href="warranty.html">Warranty</a></li>
         </ul>
       </nav>
       <div id="main-menu-right" class="menu align-right">
-        <a href="/x4robotic/find-a-dealer" class="show-for-medium button primary golden">Shop Now</a>
+        <a href="find-a-dealer.html" class="show-for-medium button primary golden">Shop Now</a>
       </div>
     </header>
   </div>
@@ -298,45 +167,49 @@
     </section>
   </div>
   <!-- CONTENT ENDS -->
-    <!-- FOOTER START -->
-    <div class="grid-container">
-      <footer>
-          <div class="grid-x align-center">
-              <div class="cell align-center large-6 medium-5 small-12">
-                  <div class="grid-x align-center-middle">
-                      <div class="cell align-center large-6 medium-10 small-12">
-                          <img src="img/aquabot-logo-white.png" width="200" height="54">
-                          <p>Copyright <span>
-                                  <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-                              </span> &copy; Aquabots - All Rights Reserved<br>
-                              <a href="privacy">Privacy Policy</a>&nbsp; | &nbsp;<a href="terms">Terms &amp;
-                                  Conditions</a>
-                          </p>
-                      </div>
-                  </div>
-              </div>
-              <div class="cell large-6 medium-7 small-12">
-                  <div class="grid-x align-center">
-                      <ul class="cell large-6 medium-6 small-12">
-                          <li>Aquabots</li>
-                          <li><a href="/">Home</a></li>
-                          <li><a href="/robotic-pool-cleaner">Robotic Pool Cleaners</a></li>
-                          <li><a href="/robotic-pool-cleaner#specifications">Specifications</a></li>
-                          <li><a href="/compare">Compare</a></li>
-                          <li><a href="/warranty">Warranty</a></li>
-                      </ul>
-                      <ul class="cell large-6 medium-6 small-12">
-                          <li>Sales &amp; Support</li>
-                          <li><a href="/find-a-dealer">Shop Now</a></li>
-                          <li><a href="/media/aquabot-x4.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>
-                                  Download
-                                  Brochure</a></li>
-                          <li><a href="/warranty#register">Register Your Warranty</a></li>
-                      </ul>
-                  </div>
-              </div>
+
+  <!-- FOOTER START -->
+  <div class="grid-container">
+    <footer>
+      <div class="grid-x align-center">
+        <div class="cell align-center large-6 medium-5 small-12">
+          <div class="grid-x align-center-middle">
+            <div class="cell align-center large-6 medium-10 small-12">
+              <img src="img/aquabot-logo-white.png" width="200" height="54">
+              <p>Copyright <span>
+                  <script>
+                    document.getElementById('copyright').appendChild(document.createTextNode(
+                      new Date().getFullYear()))
+                  </script>
+                </span> &copy; Aquabots - All Rights Reserved<br>
+                <a href="privacy">Privacy Policy</a>&nbsp; | &nbsp;<a href="terms">Terms &amp;
+                  Conditions</a>
+              </p>
+            </div>
           </div>
-      </footer>
+        </div>
+        <div class="cell large-6 medium-7 small-12">
+          <div class="grid-x align-center">
+            <ul class="cell large-6 medium-6 small-12">
+              <li>Aquabots</li>
+              <li><a href="/">Home</a></li>
+              <li><a href="robotic-pool-cleaner.html">Robotic Pool Cleaners</a></li>
+              <li><a href="robotic-pool-cleaner.html#specifications">Specifications</a></li>
+              <li><a href="compare.html">Compare</a></li>
+              <li><a href="warranty.html">Warranty</a></li>
+            </ul>
+            <ul class="cell large-6 medium-6 small-12">
+              <li>Sales &amp; Support</li>
+              <li><a href="find-a-dealer.html">Shop Now</a></li>
+              <li><a href="media/aquabot-x4.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>
+                  Download
+                  Brochure</a></li>
+              <li><a href="warranty.html">Register Your Warranty</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
   <!-- FOOTER ENDS -->
 
@@ -345,94 +218,6 @@
     try {
       Typekit.load();
     } catch (e) {}
-  </script>
-
-  <script>
-    // MyBox Script
-    var x = document.getElementsByClassName('myBox');
-    for (var i = 0; i < x.length; i++) {
-      x[i].onclick = function () {
-        window.location = this.getElementsByTagName('a')[0].getAttributeNode("href").value;
-      }
-    };
-
-    // Lazy Load
-    echo.init({
-      offset: 0,
-      throttle: 10,
-      unload: false,
-      callback: function (element, op) {
-        console.log(element, 'has been', op + 'ed')
-      }
-    });
-    // echo.render(); is also available for non-scroll callbacks
-  </script>
-
-  <script>
-    // Rotator
-    (function ($) {
-      $.fn.fixOverflow = function () {
-        if ($.browser.msie) {
-          return this.each(function () {
-            if (this.scrollWidth > this.offsetWidth) {
-              $(this).css({
-                'padding-bottom': '20px',
-                'overflow-y': 'hidden'
-              });
-            }
-          });
-        } else {
-          return this;
-        }
-      };
-    })(jQuery);
-    $('pre').fixOverflow();
-
-    $(document).ready(function () {
-      $('#quotes-rotator').jshowoff({
-        links: false,
-        controls: false,
-        effect: 'fade',
-        hoverPause: false,
-        changeSpeed: 700,
-        autoPlay: true,
-        speed: 5000
-      });
-    });
-  </script>
-  <script src="js/jquery.waypoints.js"></script>
-  <script src="js/sticky.min.js"></script>
-
-  <script>
-    var sticky1 = new Waypoint.Sticky({
-      element: $('#title-banner')[0]
-    })
-    var sticky2 = new Waypoint.Sticky({
-      element: $('#title-banner2')[0]
-    })
-    var sticky3 = new Waypoint.Sticky({
-      element: $('#title-banner3')[0]
-    })
-    var sticky4 = new Waypoint.Sticky({
-      element: $('#title-banner4')[0]
-    })
-    /*
-        $(window).load(function(){
-          $("#title-banner").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
-        });
-    
-      $(window).load(function(){
-          $$("#title-banner2").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
-        });
-    
-      $(window).load(function(){
-          $("#title-banner3").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
-        });
-    
-      $(window).load(function(){
-          $("#title-banner4").sticky({ topSpacing: 100, center:true,responsiveWidth:true});
-        });
-    */
   </script>
 
 </body>
