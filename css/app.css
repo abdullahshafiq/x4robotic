@@ -866,3 +866,7 @@ header{padding:.2rem 1rem;grid-template-columns:1fr auto 1fr}
 .overview{text-align:left;padding-top:0}
 .compare-page .sub-banner{background-size:cover}
 }
+/*! CSS HACKS AND FIXES */
+@supports (display: grid) {
+header{display:grid;grid-template-columns:1fr auto .3fr;}
+}
