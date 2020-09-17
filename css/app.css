@@ -830,7 +830,7 @@ footer{padding:2em 0;text-align:center}
 section{padding:2rem 0}
 .products-page .sub-banner,.sub-banner{padding:3em 0;background-position:top center}
 .overview{text-align:center;padding-top:0}
-.stuck.iso{width:100%;top:70px!important}
+.stuck.iso{width:100%;top:70px!important;z-index:9999}
 .object-fit{height:auto}
 .object-fit.cover{object-fit:contain}
 .specs-table{padding:1em}
