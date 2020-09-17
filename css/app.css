@@ -63,7 +63,7 @@ template{display:none}
 .grid-container{padding-right:0;padding-left:0;max-width:105rem;margin:0 auto}
 .grid-container.fluid{padding-right:.9375rem;padding-left:.9375rem;max-width:100%;margin:0 auto}
 .grid-container.full{padding-right:0;padding-left:0;max-width:100%;margin:0 auto}
-.grid-x{display:flex;display:-ms-flexbox;display:-webkit-flex;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap}
+.grid-x{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap}
 .cell{-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;min-height:0;min-width:0;width:100%}
 .cell.auto{-webkit-box-flex:1;-webkit-flex:1 1 0;-ms-flex:1 1 0;flex:1 1 0}
 .cell.shrink{-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto}
