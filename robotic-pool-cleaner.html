@@ -21,39 +21,25 @@
     <link rel="preconnect" href="https://use.typekit.net">
     <link rel="preconnect" href="https://ajax.googleapis.com">
     <link rel="preconnect" href=" https://www.google-analytics.com">
-
-    <script type="text/javascript">
-        (function (e, t) { if (typeof define === "function" && define.amd) { define(function () { return t(e) }) } else if (typeof exports === "object") { module.exports = t } else { e.echo = t(e) } })(this, function (e) { "use strict"; var t = {}; var n = function () { }; var r, i, s, o, u; var a = function (e, t) { var n = e.getBoundingClientRect(); return n.right >= t.l && n.bottom >= t.t && n.left <= t.r && n.top <= t.b }; var f = function () { if (!o && !!i) { return } clearTimeout(i); i = setTimeout(function () { t.render(); i = null }, s) }; t.init = function (i) { i = i || {}; var a = i.offset || 0; var l = i.offsetVertical || a; var c = i.offsetHorizontal || a; var h = function (e, t) { return parseInt(e || t, 10) }; r = { t: h(i.offsetTop, l), b: h(i.offsetBottom, l), l: h(i.offsetLeft, c), r: h(i.offsetRight, c) }; s = h(i.throttle, 250); o = i.debounce !== false; u = !!i.unload; n = i.callback || n; t.render(); if (document.addEventListener) { e.addEventListener("scroll", f, false); e.addEventListener("load", f, false) } else { e.attachEvent("onscroll", f); e.attachEvent("onload", f) } }; t.render = function () { var i = document.querySelectorAll("img[data-echo]"); var s = i.length; var o, f; var l = { l: 0 - r.l, t: 0 - r.t, b: (e.innerHeight || document.documentElement.clientHeight) + r.b, r: (e.innerWidth || document.documentElement.clientWidth) + r.r }; for (var c = 0; c < s; c++) { f = i[c]; if (a(f, l)) { if (u) { f.setAttribute("data-echo-placeholder", f.src) } $(f).css("opacity", "0"); f.src = f.getAttribute("data-echo"); $(f).animate({ opacity: "1" }, { speed: 1e3 }); if (!u) { f.removeAttribute("data-echo") } n(f, "load") } else if (u && !!(o = f.getAttribute("data-echo-placeholder"))) { f.src = o; f.removeAttribute("data-echo-placeholder"); n(f, "unload") } } if (!s) { t.detach() } }; t.detach = function () { if (document.removeEventListener) { e.removeEventListener("scroll", f) } else { e.detachEvent("onscroll", f) } clearTimeout(i) }; return t })
-    </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-62877944-1', 'auto');
-        ga('send', 'pageview');
-
+    <script type="text/javascript">
+        (function(e,t){if(typeof define==="function"&&define.amd){define(function(){return t(e)})}else if(typeof exports==="object"){module.exports=t}else{e.echo=t(e)}})(this,function(e){"use strict";var t={};var n=function(){};var r,i,s,o,u;var a=function(e,t){var n=e.getBoundingClientRect();return n.right>=t.l&&n.bottom>=t.t&&n.left<=t.r&&n.top<=t.b};var f=function(){if(!o&&!!i){return}clearTimeout(i);i=setTimeout(function(){t.render();i=null},s)};t.init=function(i){i=i||{};var a=i.offset||0;var l=i.offsetVertical||a;var c=i.offsetHorizontal||a;var h=function(e,t){return parseInt(e||t,10)};r={t:h(i.offsetTop,l),b:h(i.offsetBottom,l),l:h(i.offsetLeft,c),r:h(i.offsetRight,c)};s=h(i.throttle,250);o=i.debounce!==false;u=!!i.unload;n=i.callback||n;t.render();if(document.addEventListener){e.addEventListener("scroll",f,false);e.addEventListener("load",f,false)}else{e.attachEvent("onscroll",f);e.attachEvent("onload",f)}};t.render=function(){var i=document.querySelectorAll("img[data-echo]");var s=i.length;var o,f;var l={l:0-r.l,t:0-r.t,b:(e.innerHeight||document.documentElement.clientHeight)+r.b,r:(e.innerWidth||document.documentElement.clientWidth)+r.r};for(var c=0;c<s;c++){f=i[c];if(a(f,l)){if(u){f.setAttribute("data-echo-placeholder",f.src)}$(f).css("opacity","0");f.src=f.getAttribute("data-echo");$(f).animate({opacity:"1"},{speed:1e3});if(!u){f.removeAttribute("data-echo")}n(f,"load")}else if(u&&!!(o=f.getAttribute("data-echo-placeholder"))){f.src=o;f.removeAttribute("data-echo-placeholder");n(f,"unload")}}if(!s){t.detach()}};t.detach=function(){if(document.removeEventListener){e.removeEventListener("scroll",f)}else{e.detachEvent("onscroll",f)}clearTimeout(i)};return t})
     </script>
 </head>
 
 <body class="products-page">
     <!-- HEADER START -->
-    <div class="grid-container">
-        <header class="stuck-header">
+    <div class="grid-container stuck">
+        <header>
             <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-            <div id="site-logo"><a href="/"><img src="img/aquabot-logo.png" alt="Aquabot logo"></a>
+            <div class="site-logo"><a href="/"><img src="img/aquabot-logo.png" alt="Aquabot logo"></a>
             </div>
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <nav>
                 <ul>
                     <li><a class="active" href="/x4robotic/robotic-pool-cleaner.html">Products</a></li>
                     <li><a href="/x4robotic/compare.html">Compare</a></li>
-                    <li><a href="robotic-pool-cleaner.html#specifications.html">Specs</a></li>
+                    <li><a href="/robotic-pool-cleaner#specifications">Specs</a></li>
                     <li><a href="/x4robotic/warranty.html">Warranty</a></li>
                 </ul>
             </nav>
@@ -93,8 +79,7 @@
                         <div class="cell large-4 medium-4 small-12">
                             <div class="grid-x align-center grid-padding-x">
                                 <div class="cell large-4 medium-12 small-5">
-                                    <img src="img/filtration-preview.jpg" data-echo="img/filtration-preview.jpg"
-                                        width="180" height="195" alt="filter preview">
+                                    <img src="img/filtration-preview.jpg" width="180" height="195" alt="filter preview">
                                 </div>
                                 <div class="cell large-8 medium-12 small-12">
                                     <h2><span>Premium</span> Filtration</h2>
@@ -109,8 +94,7 @@
                         <div class="cell large-4 medium-4 small-12">
                             <div class="grid-x align-center grid-padding-x">
                                 <div class="cell large-4 medium-12 small-5">
-                                    <img src="img/warranty-preview.jpg" data-echo="img/warranty-preview.jpg" width="180"
-                                        height="195" alt="warranty preview">
+                                    <img src="img/warranty-preview.jpg" width="180" height="195" alt="warranty preview">
                                 </div>
                                 <div class="cell large-8 medium-12 small-12">
                                     <h2><span>3 Year</span> Warranty</h2>
@@ -125,8 +109,7 @@
                         <div class="cell large-4 medium-4 small-12">
                             <div class="grid-x align-center grid-padding-x">
                                 <div class="cell large-4 medium-12 small-5">
-                                    <img src="img/convienience-preview.jpg" data-echo="img/convienience-preview.jpg"
-                                        width="180" height="195" alt="convienience preview">
+                                    <img src="img/convienience-preview.jpg" width="180" height="195" alt="convienience preview">
                                 </div>
                                 <div class="cell large-8 medium-12 small-12">
                                     <h2><span>Easy</span> Operation</h2>
@@ -174,8 +157,7 @@
                     </div>
                 </div>
                 <div class="cell large-6 medium-6 small-12 large-order-1 medium-order-1 align-self-bottom">
-                    <img class="object-fit cover center" src="img/blank.png"
-                        data-echo="img/pool-family-healthy-mono.jpg" width="1652" height="669" alt="pool happy family">
+                    <img class="object-fit cover center" src="img/pool-family-healthy-mono.jpg" width="1652" height="669" alt="pool happy family">
                 </div>
             </div>
         </section>
@@ -183,21 +165,21 @@
     <!-- CRYSTAL CLEAR POOL ENDS -->
 
     <!-- AQUABOT® X4™ FEATURES START -->
-    <div class="grid-container">
-        <!--AQUABOT X4 FEATURES BAR START -->
-        <div id="title-banner">
+    <!--AQUABOT X4 FEATURES BAR START -->
+    <div class="grid-container stuck iso">
+        <div class="title-banner iso-blue">
             <h4>Aquabot&reg; X4&trade; Features</h4>
             <div class="down-arrow">
-                <p class="isoscelesDown-blue">This is an isosceles triangle pointing downwards.</p>
+                <p class="isoscelesDown">This is an isosceles triangle pointing downwards.</p>
             </div>
         </div>
-        <!--AQUABOT X4 FEATURES BAR ENDS -->
+    </div>
+    <!--AQUABOT X4 FEATURES BAR ENDS -->
+    <div class="grid-container">
         <div class="aquabot-features bg-white">
             <div class="grid-x align-center-middle">
                 <div class="cell large-6 medium-6 small-12 align-self-top large-order-1 medium-order-1">
-                    <img class="object-fit cover left" src="img/blank.png"
-                        data-echo="img/advanced-micro-cleaning-brush.jpg" width="1124" height="608"
-                        alt="advanced micro cleaning brush">
+                    <img class="object-fit cover left" src="img/advanced-micro-cleaning-brush.jpg" width="1124" height="608" alt="advanced micro cleaning brush">
                 </div>
                 <div class="cell large-6 medium-6 small-12 margin-2">
                     <div class="grid-x align-center-middle grid-padding-x">
@@ -225,8 +207,7 @@
         <div class="aquabot-features bg-white">
             <div class="grid-x grid-padding-x align-center-middle">
                 <div class="cell large-6 medium-6 small-12 text-center align-self-bottom">
-                    <img class="object-fit cover center" src="img/blank.png" data-echo="img/pool-robot-filtration.jpg"
-                        width="811" height="637" alt="pool robot filtration">
+                    <img class="object-fit cover center" src="img/pool-robot-filtration.jpg" width="811" height="637" alt="pool robot filtration">
                 </div>
                 <div class="cell large-6 medium-6 small-12 margin-2 large-order-1 medium-order-1">
                     <div class="grid-x align-center-middle">
@@ -281,8 +262,7 @@
                     </div>
                 </div>
                 <div class="cell large-6 medium-6 small-12">
-                    <img class="object-fit cover left" src="img/360-degree-pool-swivel.png" width="716" height="562"
-                        alt="360 robotic pool cleaner swivel">
+                    <img class="object-fit cover left" src="img/360-degree-pool-swivel.png" width="716" height="562" alt="360 robotic pool cleaner swivel">
                 </div>
             </div>
         </div>
@@ -294,8 +274,7 @@
         <div class="aquabot-features bg-white">
             <div class="grid-x align-center-middle">
                 <div class="cell large-6 medium-6 small-12 text-center align-self-bottom">
-                    <img class="object-fit cover left" src="img/blank.png" data-echo="img/4-wheel-drive.jpg" width="840"
-                        height="569" alt="4 wheel drive pool robot">
+                    <img class="object-fit cover left" src="img/4-wheel-drive.jpg" width="840" height="569" alt="4 wheel drive pool robot">
                 </div>
                 <div class="cell large-6 medium-6 small-12 margin-2 large-order-1 medium-order-1">
                     <div class="grid-x align-center-middle grid-padding-x">
@@ -340,8 +319,7 @@
                     </div>
                 </div>
                 <div class="cell large-6 medium-6 small-12 text-center align-self-bottom large-order-1 medium-order-1">
-                    <img class="object-fit cover right" src="img/blank.png" data-echo="img/cable-floating.jpg"
-                        width="1700" height="556" alt="cable floating">
+                    <img class="object-fit cover right" src="img/cable-floating.jpg" width="1700" height="556" alt="cable floating">
                 </div>
             </div>
         </div>
@@ -350,8 +328,7 @@
         <div class="aquabot-features bg-white">
             <div class="grid-x align-center-middle">
                 <div class="cell large-6 medium-6 small-12 text-center align-self-bottom">
-                    <img class="object-fit cover left" src="img/blank.png" data-echo="img/power-supply-bg.jpg"
-                        width="1700" height="669" alt="power supply">
+                    <img class="object-fit cover left" src="img/power-supply-bg.jpg" width="1700" height="669" alt="power supply">
                 </div>
                 <div class="cell large-6 medium-6 small-12 margin-2 large-order-1 medium-order-1">
                     <div class="grid-x align-center-middle grid-padding-x">
@@ -410,8 +387,7 @@
                     </div>
                 </div>
                 <div class="cell large-6 medium-6 small-12 text-center align-self-bottom">
-                    <img class="object-fit cover left" src="img/blank.png" data-echo="img/efficiency.jpg" width="908"
-                        height="634" alt="programmable power supply">
+                    <img class="object-fit cover left" src="img/efficiency.jpg" width="908" height="634" alt="programmable power supply">
                 </div>
             </div>
         </div>
@@ -451,8 +427,7 @@
         <div class="aquabot-features bg-white">
             <div class="grid-x grid-padding-x align-center-middle">
                 <div class="cell large-6 medium-12 small-12 grid-padding-x">
-                    <img class="object-fit cover right" src="img/blank.png" data-echo="img/robot-caddy-2.jpg"
-                        width="728" height="909" alt="robotic pool caddy">
+                    <img class="object-fit cover right" src="img/robot-caddy-2.jpg" width="728" height="909" alt="robotic pool caddy">
                 </div>
                 <div class="cell large-6 medium-12 small-12 margin-2">
                     <div class="grid-x align-center-middle">
@@ -498,8 +473,7 @@
                     </div>
                 </div>
                 <div class="cell large-6 medium-12 small-12">
-                    <img class="object-fit cover center" src="img/blank.png" data-echo="img/3-years.jpg" width="904"
-                        height="581" alt="3 year warranty">
+                    <img class="object-fit cover center" src="img/3-years.jpg" width="904" height="581" alt="3 year warranty">
                 </div>
             </div>
         </div>
@@ -507,23 +481,24 @@
     <!--CADDY ENDS -->
 
     <!--SPECIFICATIONS START -->
-    <div class="grid-container">
-        <!--SPECIFICATIONS BAR START -->
-        <div id="specifications">
+    <!--SPECIFICATIONS BAR START -->
+    <div class="grid-container stuck iso">
+        <div class="title-banner iso-dblue">
             <h4>Specifications</h4>
             <div class="down-arrow">
-                <p class="isoscelesDown-blue">This is an isosceles triangle pointing downwards.</p>
+                <p class="isoscelesDown">This is an isosceles triangle pointing downwards.</p>
             </div>
         </div>
-        <!--SPECIFICATIONS BAR ENDS -->
+    </div>
+    <!--SPECIFICATIONS BAR ENDS -->
+    <div class="grid-container">
         <div class="bg-white">
-            <div class="grid-x clearfix">
+            <div class="grid-x">
                 <div class="cell large-5 medium-12 small-12 margin-2">
                     <div class="grid-x align-center-middle">
                         <div class="cell large-8 medium-8 small-10">
-                            <img src="img/blank.png" data-echo="img/aquabot-x4-specs.jpg" width="450" height="430"
-                                alt="aquabot x4 specs">
-                            <h2>Tech Specs</h2>
+                            <img src="img/aquabot-x4-specs.jpg" width="450" height="430" alt="aquabot x4 specs">
+                            <h1>Tech Specs</h1>
                             <p>The Aquabot X4 is built to thoroughly clean your pool, no matter the shape, size or
                                 surface.
                                 Leading innovations and specifications give you a best-in-class clean for less energy,
@@ -620,15 +595,17 @@
     <!--SPECIFICATIONS ENDS -->
 
     <!-- CUSTOMER REVIEWS START -->
-    <div class="grid-container">
-        <div class="grid-container">
-            <div id="title-banner4">
-                <h4>Customer Reviews &amp; Special Offers</h4>
-                <div class="down-arrow">
-                    <p class="isoscelesDown-blue">This is an isosceles triangle pointing downwards.</p>
-                </div>
+    <!--CUSTOMER REVIEWS BAR START -->
+    <div class="grid-container stuck iso">
+        <div class="title-banner iso-lblue">
+            <h4>Customer Reviews &amp; Special Offers</h4>
+            <div class="down-arrow">
+                <p class="isoscelesDown">This is an isosceles triangle pointing downwards.</p>
             </div>
         </div>
+    </div>
+    <!--CUSTOMER REVIEWS BAR START -->
+    <div class="grid-container">
         <section>
             <div class="grid-x">
                 <div class="cell large-7 medium-7 small-12">
@@ -703,7 +680,10 @@
                         <div class="cell align-center large-6 medium-10 small-12">
                             <img src="img/aquabot-logo-white.png" width="200" height="54">
                             <p>Copyright <span>
-                                    <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                                    <script>
+                                        document.getElementById('copyright').appendChild(document.createTextNode(
+                                            new Date().getFullYear()))
+                                    </script>
                                 </span> &copy; Aquabots - All Rights Reserved<br>
                                 <a href="privacy">Privacy Policy</a>&nbsp; | &nbsp;<a href="terms">Terms &amp;
                                     Conditions</a>
@@ -735,16 +715,21 @@
         </footer>
     </div>
     <!-- FOOTER ENDS -->
-
     <script src="https://use.typekit.net/fzb6psq.js"></script>
-    <script>try { Typekit.load(); } catch (e) { }</script>
+    <script>
+        try {
+            Typekit.load();
+        } catch (e) {}
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="js/plugins.js"></script>
     <script>
         // MyBox Script
         var x = document.getElementsByClassName('myBox');
         for (var i = 0; i < x.length; i++) {
-            x[i].onclick = function () { window.location = this.getElementsByTagName('a')[0].getAttributeNode("href").value; }
+            x[i].onclick = function () {
+                window.location = this.getElementsByTagName('a')[0].getAttributeNode("href").value;
+            }
         };
         echo.init({
             offset: 0,
@@ -752,7 +737,6 @@
             unload: false
         });
     </script>
-
     <script>
         // Rotator
         (function ($) {
@@ -760,7 +744,10 @@
                 if ($.browser.msie) {
                     return this.each(function () {
                         if (this.scrollWidth > this.offsetWidth) {
-                            $(this).css({ 'padding-bottom': '20px', 'overflow-y': 'hidden' });
+                            $(this).css({
+                                'padding-bottom': '20px',
+                                'overflow-y': 'hidden'
+                            });
                         }
                     });
                 } else {
@@ -782,21 +769,6 @@
             });
         });
     </script>
-    <script src="js/jquery.waypoints.js"></script>
-    <script src="js/sticky.min.js"></script>
-
-    <script>
-        var sticky1 = new Waypoint.Sticky({
-            element: $('#title-banner')[0]
-        })
-        var sticky2 = new Waypoint.Sticky({
-            element: $('#specifications')[0]
-        })
-        var sticky3 = new Waypoint.Sticky({
-            element: $('#title-banner4')[0]
-        })
-    </script>
-
 </body>
 
 </html>
