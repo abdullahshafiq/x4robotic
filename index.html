@@ -17,10 +17,7 @@
     <link rel="preload"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0" as="font"
         crossorigin>
-    <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com">
     <link rel="preconnect" href="https://use.typekit.net">
-    <link rel="preconnect" href="https://ajax.googleapis.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
@@ -71,7 +68,8 @@
                             class="aquabot-shadow fadeInShadow animated z-back">
                     </div>
                 </div>
-                <div class="cell large-12 medium-12 small-12 absolute banner-bottom hide-for-small-only show-for-medium">
+                <div
+                    class="cell large-12 medium-12 small-12 absolute banner-bottom hide-for-small-only show-for-medium">
                     <div class="grid-x">
                         <div class="cell large-6 medium-6 small-12 bg-white"></div>
                         <div class=" cell large-6 medium-6 small-12 bg-blue"></div>
@@ -345,8 +343,8 @@
                 <div class="cell large-7 medium-7 small-12">
                     <div class="grid-x grid-margin-x align-center-middle">
                         <div class="cell large-10 medium-10 small-12">
-                            <div id="quotes-rotator">
-                                <div title="1">
+                            <div class="rotate-slider">
+                                <div class='slide1'>
                                     <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                             class="fa fa-star"></i><i class="fa fa-star"></i><i
                                             class="fa fa-star"></i></span>
@@ -354,10 +352,10 @@
                                         very
                                         simple
                                         to run, place in the pool, and remove."</h3>
-                                    <h4 class="name">Kanoland</h4>
-                                    <h6 class="location">San Antonio, TX</h6>
+                                    <h4 >Kanoland</h4>
+                                    <h6>San Antonio, TX</h6>
                                 </div>
-                                <div title="2">
+                                <div class='slide2'>
                                     <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                             class="fa fa-star"></i><i class="fa fa-star"></i><i
                                             class="fa fa-star"></i></span>
@@ -365,10 +363,10 @@
                                         and
                                         works
                                         great. Worth the money"</h3>
-                                    <h4 class="name">Jaime</h4>
-                                    <h6 class="location">Akron, OH</h6>
+                                    <h4>Jaime</h4>
+                                    <h6>Akron, OH</h6>
                                 </div>
-                                <div title="3">
+                                <div class='slide3'>
                                     <span class="star-rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                             class="fa fa-star"></i><i class="fa fa-star"></i><i
                                             class="fa fa-star"></i></span>
@@ -376,8 +374,8 @@
                                         the
                                         pool
                                         was spotless. Simple to use. I highly recommend this product."</h3>
-                                    <h4 class="name">Scott S.</h4>
-                                    <h6 class="location">Sun Valley, CA</h6>
+                                    <h4>Scott S.</h4>
+                                    <h6>Sun Valley, CA</h6>
                                 </div>
                             </div>
                         </div>
@@ -454,50 +452,6 @@
         try {
             Typekit.load();
         } catch (e) { }
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script>
-        // Lazy Load
-        echo.init({
-            offset: 0,
-            throttle: 10,
-            unload: false
-        });
-        // echo.render(); is also available for non-scroll callbacks
-    </script>
-
-    <script>
-        // Rotator
-        (function ($) {
-            $.fn.fixOverflow = function () {
-                if ($.browser.msie) {
-                    return this.each(function () {
-                        if (this.scrollWidth > this.offsetWidth) {
-                            $(this).css({
-                                'padding-bottom': '20px',
-                                'overflow-y': 'hidden'
-                            });
-                        }
-                    });
-                } else {
-                    return this;
-                }
-            };
-        })(jQuery);
-        $('pre').fixOverflow();
-
-        $(document).ready(function () {
-            $('#quotes-rotator').jshowoff({
-                links: false,
-                controls: false,
-                effect: 'fade',
-                hoverPause: false,
-                changeSpeed: 700,
-                autoPlay: true,
-                speed: 5000
-            });
-        });
     </script>
 </body>
 

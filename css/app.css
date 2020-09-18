@@ -6,9 +6,9 @@
  * Licensed under MIT Open Source
  */
  /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
-html{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:100%;line-height:1.4}
+html{-webkit-box-sizing:border-box;box-sizing:border-box;font-size:100%;line-height:1.4;scroll-behavior:smooth;}
 *,::after,::before{-webkit-box-sizing:inherit;box-sizing:inherit}
-body{margin:0;padding:0;font-family:museo-sans-condensed,Helvetica,Arial,sans-serif;font-weight:400;line-height:1.5;color:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#ebf4ff}
+body{margin:0;padding:0;font-family:museo-sans-condensed,Helvetica,Arial,sans-serif;font-weight:400;line-height:1.5;color:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#ebf4ff;}
 img{display:inline-block;vertical-align:middle;max-width:100%;height:auto;-ms-interpolation-mode:bicubic}
 textarea{height:auto;min-height:50px;border-radius:3px}
 select{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;border-radius:3px}
@@ -782,12 +782,17 @@ table{border-collapse:collapse;border-spacing:0}
 .title-banner.iso-lblue h4{background:#28a3f5}
 .title-banner.iso-lblue p{border-top:30px solid #28a3f5}
 /*! QUOTES ROTATOR */
-#quotes-rotator{text-align:left;padding:15px}
-#quotes-rotator .fa{color:#f9a725;color:#28a3f5;font-size:40px;padding:0 5px}
-#quotes-rotator h3{font-size:1.5em;line-height:1.3em;font-family:museo-sans,Helvetica,Arial,sans-serif;font-weight:600;color:#000}
-#quotes-rotator h4{font-weight:600}
-#quotes-rotator .name{color:#000;margin:20px 0 10px;font-size:30px}
-#quotes-rotator .location{font-size:16px;font-weight:300;font-family:museo-sans,Helvetica,Arial,sans-serif;margin:0}
+.rotate-slider{max-width:100%;height:23em;margin:1em auto;position:relative}
+.rotate-slider .fa{color:#f9a725;color:#28a3f5;font-size:40px;padding:0 5px}
+.rotate-slider h3{font-size:1.5em;line-height:1.3em;font-weight:600;color:#000;font-family:"museo-sans", Helvetica, Arial, sans-serif;}
+.rotate-slider h4{font-weight:600;color:#000;margin:20px 0 10px;font-size:1.5em}
+.rotate-slider h6{font-size:1em;font-weight:300;font-family:museo-sans,Helvetica,Arial,sans-serif;margin:0}
+.slide1,.slide2,.slide3{position:absolute;width:100%;height:100%}
+.slide1{animation:fade 15s -0s infinite;-webkit-animation:fade 15s -0s infinite;-webkit-animation-timing-function: ease-in-out;animation-timing-function: ease-in-out;}
+.slide2{animation:fade 15s -5s infinite;-webkit-animation:fade 15s -5s infinite;-webkit-animation-timing-function: ease-in-out;animation-timing-function: ease-in-out;}
+.slide3{animation:fade 15s -10s infinite;-webkit-animation:fade 15s -10s infinite;-webkit-animation-timing-function: ease-in-out;animation-timing-function: ease-in-out;}
+@-webkit-keyframes fade{0%{opacity:0}20%{opacity:1}33%{opacity:1}53%{opacity:0}100%{opacity:0}}
+@keyframes fade{0%{opacity:0}20%{opacity:1}33%{opacity:1}53%{opacity:0}100%{opacity:0}}
 /*! SUB BANNERS */
 .sub-banner{padding:5em 0;background-size:cover;background:url(../img/healthier-clean-background.jpg) center center no-repeat}
 .sub-banner.small{padding:2em 0}
